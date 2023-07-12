@@ -1,63 +1,66 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.db.models import F, Q
-from django.utils.translation import gettext_lazy as _
 
 
 class User(AbstractUser):
+    """
+    Расширенная модель пользователя.
+    """
+
     USER = "user"
     MODERATOR = "moderator"
     ADMIN = "admin"
-    ROLES = {
-        (USER, "user"),
-        (MODERATOR, "moderator"),
-        (ADMIN, "admin"),
-    }
+    ROLES = (
+        (USER, "Пользователь"),
+        (MODERATOR, "Модератор"),
+        (ADMIN, "Администратор"),
+    )
     email = models.EmailField(
-        verbose_name=_("Адрес email"),
+        verbose_name="Адрес email",
         max_length=254,
         unique=True,
         blank=False,
         error_messages={
-            "unique": _("Пользователь с таким email уже существует!"),
+            "unique": "Пользователь с таким email уже существует!",
         },
-        help_text=_("Укажите свой email"),
+        help_text="Укажите свой email",
     )
     username = models.CharField(
-        verbose_name=_("Логин"),
+        verbose_name="Логин",
         max_length=150,
         unique=True,
         error_messages={
-            "unique": _("Пользователь с таким никнеймом уже существует!"),
+            "unique": "Пользователь с таким никнеймом уже существует!",
         },
-        help_text=_("Укажите свой никнейм"),
+        help_text="Укажите свой никнейм",
     )
     first_name = models.CharField(
-        verbose_name=_("Имя"),
+        verbose_name="Имя",
         max_length=150,
         blank=True,
-        help_text=_("Укажите своё имя"),
+        help_text="Укажите своё имя",
     )
     last_name = models.CharField(
-        verbose_name=_("Фамилия"),
+        verbose_name="Фамилия",
         max_length=150,
         blank=True,
-        help_text=_("Укажите свою фамилию"),
+        help_text="Укажите свою фамилию",
     )
     role = models.CharField(
-        verbose_name=_("Статус"),
+        verbose_name="Статус",
         max_length=20,
         choices=ROLES,
         default=ADMIN,
     )
     date_joined = models.DateTimeField(
-        verbose_name=_("Дата регистрации"),
+        verbose_name="Дата регистрации",
         auto_now_add=True,
     )
     password = models.CharField(
-        verbose_name=_("Пароль"),
+        verbose_name="Пароль",
         max_length=150,
-        help_text=_("Введите пароль"),
+        help_text="Введите пароль",
     )
 
     class Meta:
@@ -70,14 +73,24 @@ class User(AbstractUser):
 
     @property
     def is_moderator(self):
+        """
+        Проверяет, является ли пользователь модератором.
+        """
         return self.is_staff or self.role == self.MODERATOR
 
     @property
     def is_admin(self):
+        """
+        Проверяет, является ли пользователь администратором.
+        """
         return self.is_superuser or self.role == self.ADMIN
 
 
 class Follow(models.Model):
+    """
+    Модель подписки на авторов рецептов.
+    """
+
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,

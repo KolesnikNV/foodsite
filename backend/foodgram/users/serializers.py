@@ -1,13 +1,30 @@
+from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer, UserSerializer
 from rest_framework import serializers
 
 from food.models import Recipe
-from .models import Follow, User
+
+from .models import Follow
+
+User = get_user_model()
+
+
+# class CurrentUserDefaultId(object):
+#     """
+#     Класс-фабрика для определения идентификатора текущего пользователя.
+#     """
+
+#     requires_context = True
+
+#     def __call__(self, serializer_instance=None):
+#         if serializer_instance is not None:
+#             self.user_id = serializer_instance.context["request"].user.id
+#             return self.user_id
 
 
 class CustomUserCreateSerializer(UserCreateSerializer):
     """
-    Сериализатор для модели User.
+    Пользовательский сериализатор для создания пользователя.
     """
 
     class Meta:
@@ -24,7 +41,7 @@ class CustomUserCreateSerializer(UserCreateSerializer):
 
 class CustomUserSerializer(UserSerializer):
     """
-    Сериализатор для модели User.
+    Пользовательский сериализатор для модели User.
     """
 
     is_subscribed = serializers.SerializerMethodField(read_only=True)
@@ -42,7 +59,7 @@ class CustomUserSerializer(UserSerializer):
 
     def get_is_subscribed(self, obj):
         """
-        Подписан ли пользователь на автора.
+        Возвращает информацию о том, подписан ли текущий пользователь на переданного пользователя.
         """
         request = self.context.get("request")
         if not request or request.user.is_anonymous:
@@ -54,7 +71,7 @@ class CustomUserSerializer(UserSerializer):
 
 class FollowRecipeSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для короткой модели рецепта в подписках.
+    Сериализатор для краткой информации о рецепте в подписках.
     """
 
     class Meta:
@@ -62,18 +79,22 @@ class FollowRecipeSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "image", "cooking_time")
 
 
-class FollowSerializer(serializers.ModelSerializer):
+class SubscriptionSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для подписок.
+    Сериализатор для информации о подписке пользователя.
     """
 
-    is_subscribed = serializers.SerializerMethodField(read_only=True)
-    recipes = serializers.SerializerMethodField(read_only=True)
-    recipes_count = serializers.SerializerMethodField(read_only=True)
+    is_subscribed = serializers.SerializerMethodField(
+        method_name="get_is_subscribed"
+    )
+    recipes = serializers.SerializerMethodField(method_name="get_recipes")
+    recipes_count = serializers.SerializerMethodField(
+        method_name="get_recipes_count"
+    )
 
     class Meta:
         model = User
-        fields = (
+        fields = [
             "email",
             "id",
             "username",
@@ -82,24 +103,28 @@ class FollowSerializer(serializers.ModelSerializer):
             "is_subscribed",
             "recipes",
             "recipes_count",
-        )
+        ]
 
     def get_is_subscribed(self, obj):
+        """
+        Возвращает информацию о том, подписан ли текущий пользователь на переданного пользователя.
+        """
         user = self.context.get("request").user
         if not user:
             return False
         return Follow.objects.filter(user=user, author=obj).exists()
 
     def get_recipes(self, obj):
+        """
+        Возвращает информацию о рецептах пользователя, на которого подписан текущий пользователь.
+        """
         request = self.context.get("request")
-        limit_recipes = request.query_params.get("recipes_limit")
-        if limit_recipes is not None:
-            recipes = obj.recipes.all()[: (int(limit_recipes))]
-        else:
-            recipes = obj.recipes.all()
+        recipes = obj.recipe_set.all()[:6]
         context = {"request": request}
         return FollowRecipeSerializer(recipes, many=True, context=context).data
 
-    @staticmethod
-    def get_recipes_count(obj):
-        return obj.recipes.count()
+    def get_recipes_count(self, obj):
+        """
+        Возвращает количество рецептов пользователя.
+        """
+        return Recipe.objects.filter(author=obj).count()
