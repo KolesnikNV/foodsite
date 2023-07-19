@@ -18,6 +18,8 @@ urlpatterns = [
     path(r"", include(api_router_v1.urls)),
     path(r"auth/token/login/", TokenCreateView.as_view(), name="token_create"),
     path(r"users/<int:pk>/subscribe/", follow_author, name="follow-author"),
-    path(r"auth/token/logout/", CustomTokenDestroyView.as_view(), name="logout"),
+    path(
+        r"auth/token/logout/", CustomTokenDestroyView.as_view(), name="logout"
+    ),
     path(r"", include("djoser.urls")),
 ]

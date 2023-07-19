@@ -42,10 +42,15 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100, verbose_name="Название")),
+                (
+                    "name",
+                    models.CharField(max_length=100, verbose_name="Название"),
+                ),
                 (
                     "unit",
-                    models.CharField(max_length=50, verbose_name="Единицы измерения"),
+                    models.CharField(
+                        max_length=50, verbose_name="Единицы измерения"
+                    ),
                 ),
             ],
             options={
@@ -67,7 +72,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=100, verbose_name="Название рецепта"),
+                    models.CharField(
+                        max_length=100, verbose_name="Название рецепта"
+                    ),
                 ),
                 (
                     "image",
@@ -77,7 +84,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "text",
-                    models.TextField(max_length=500, verbose_name="Описание рецепта"),
+                    models.TextField(
+                        max_length=500, verbose_name="Описание рецепта"
+                    ),
                 ),
                 (
                     "cooking_time",
@@ -122,7 +131,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "unit",
-                    models.CharField(max_length=50, verbose_name="Единицы измерения"),
+                    models.CharField(
+                        max_length=50, verbose_name="Единицы измерения"
+                    ),
                 ),
             ],
             options={
@@ -150,7 +161,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "color",
-                    models.CharField(max_length=7, unique=True, verbose_name="Цвет"),
+                    models.CharField(
+                        max_length=7, unique=True, verbose_name="Цвет"
+                    ),
                 ),
                 ("slug", models.SlugField(unique=True, verbose_name="Слаг")),
             ],

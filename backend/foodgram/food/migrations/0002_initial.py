@@ -28,7 +28,8 @@ class Migration(migrations.Migration):
             model_name="recipeingredient",
             name="ingredient",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="food.ingredient"
+                on_delete=django.db.models.deletion.CASCADE,
+                to="food.ingredient",
             ),
         ),
         migrations.AddField(
@@ -86,7 +87,8 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="recipeingredient",
             constraint=models.UniqueConstraint(
-                fields=("recipe", "ingredient"), name="recipe_ingredient_unique"
+                fields=("recipe", "ingredient"),
+                name="recipe_ingredient_unique",
             ),
         ),
         migrations.AddConstraint(

@@ -1,7 +1,8 @@
 from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer, UserSerializer
-from food.models import Recipe
 from rest_framework import serializers
+
+from food.models import Recipe
 
 from .models import Follow
 
@@ -52,7 +53,9 @@ class CustomUserSerializer(UserSerializer):
     """
 
     is_subscribed = serializers.SerializerMethodField(read_only=True)
-    email = serializers.EmailField(required=False, allow_null=True, allow_blank=True)
+    email = serializers.EmailField(
+        required=False, allow_null=True, allow_blank=True
+    )
 
     class Meta:
         model = User
@@ -92,9 +95,13 @@ class SubscriptionSerializer(serializers.ModelSerializer):
     Сериализатор для информации о подписке пользователя.
     """
 
-    is_subscribed = serializers.SerializerMethodField(method_name="get_is_subscribed")
+    is_subscribed = serializers.SerializerMethodField(
+        method_name="get_is_subscribed"
+    )
     recipes = serializers.SerializerMethodField(method_name="get_recipes")
-    recipes_count = serializers.SerializerMethodField(method_name="get_recipes_count")
+    recipes_count = serializers.SerializerMethodField(
+        method_name="get_recipes_count"
+    )
 
     class Meta:
         model = User
