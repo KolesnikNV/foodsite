@@ -1,13 +1,7 @@
 from django.contrib import admin
 
-from .models import (
-    FavoriteRecipe,
-    Ingredient,
-    Recipe,
-    RecipeIngredient,
-    ShoppingList,
-    Tags,
-)
+from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
+                     ShoppingCart, Tags)
 
 
 @admin.register(Tags)
@@ -35,11 +29,11 @@ class IngredientAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "name",
-        "unit",
+        "measurement_unit",
         "get_recipes_count",
     )
     search_fields = ("name",)
-    ordering = ("unit",)
+    ordering = ("measurement_unit",)
 
     def get_recipes_count(self, obj):
         """
@@ -56,7 +50,7 @@ class RecipeIngredientsInline(admin.TabularInline):
     """
 
     model = RecipeIngredient
-    exclude = ("unit",)
+    exclude = ("measurement_unit",)
     min_num = 1
     extra = 1
 
@@ -112,10 +106,10 @@ class FavoriteRecipeAdmin(admin.ModelAdmin):
     )
 
 
-@admin.register(ShoppingList)
+@admin.register(ShoppingCart)
 class ShoppingListAdmin(admin.ModelAdmin):
     """
-    Административный класс для модели ShoppingList.
+    Административный класс для модели ShoppingCart.
     """
 
     list_display = (

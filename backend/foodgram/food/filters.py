@@ -6,7 +6,7 @@ from .models import Ingredient, Recipe
 class IngredientFilter(filters.FilterSet):
     """
     Класс фильтров для модели Ingredient.
-    Поддерживает фильтрацию по имени (регистронезависимо).
+    Поддерживает фильтрацию по названию (регистронезависимо).
     """
 
     name = filters.CharFilter(
@@ -28,13 +28,10 @@ class RecipeFilter(filters.FilterSet):
     """
 
     is_favorited = filters.BooleanFilter(
-        method="get_favorite",
-        label="favorite",
+        method="get_is_favorited",
     )
-    tags = filters.AllValuesMultipleFilter(
-        field_name="tags__slug",
-        label="tags",
-    )
+    tags = filters.BaseInFilter(field_name="tags__slug", lookup_expr="in")
+
     is_in_shopping_cart = filters.BooleanFilter(
         method="get_is_in_shopping_cart",
         label="shopping_cart",
@@ -45,23 +42,27 @@ class RecipeFilter(filters.FilterSet):
         fields = (
             "tags",
             "author",
+            "recipeingredient",
             "is_favorited",
             "is_in_shopping_cart",
         )
 
-    def get_favorite(self, queryset, name, value):
+    def get_is_favorited(self, queryset, name, value):
         """
         Фильтрует рецепты на основе того, добавлены ли они в избранное пользователем или нет.
         """
+        request = self.request
+        user = request.user
+
         if value:
-            return queryset.filter(in_favorite__user=self.request.user)
-        return queryset.exclude(in_favorite__user=self.request.user)
+            return queryset.filter(favoriterecipe__user=user)
+        else:
+            return queryset.exclude(favoriterecipe__user=user)
 
     def get_is_in_shopping_cart(self, queryset, name, value):
         """
         Фильтрует рецепты на основе того, находятся ли они в списке покупок пользователя или нет.
         """
         if value:
-            return Recipe.objects.filter(
-                shopping_recipe__user=self.request.user
-            )
+            return queryset.filter(shopping_recipe__user=self.request.user)
+        return queryset.exclude(shopping_recipe__user=self.request.user)

@@ -11,14 +11,16 @@ class Ingredient(models.Model):
     """
 
     name = models.CharField("Название", max_length=100, blank=False)
-    unit = models.CharField("Единицы измерения", max_length=50, blank=False)
+    measurement_unit = models.CharField(
+        "Единицы измерения", max_length=50, blank=False
+    )
 
     class Meta:
         verbose_name = "Ингредиент"
         verbose_name_plural = "Ингредиенты"
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return f"{self.name} - {self.measurement_unit}"
 
 
 class Tags(models.Model):
@@ -38,7 +40,7 @@ class Tags(models.Model):
         verbose_name_plural = "Тэги"
 
     def __str__(self):
-        return self.name
+        return self.slug
 
 
 class Recipe(models.Model):
@@ -55,7 +57,7 @@ class Recipe(models.Model):
     )
     name = models.CharField("Название рецепта", max_length=100, blank=False)
     image = models.ImageField(
-        "Изображение блюда", upload_to="media/images/", blank=False
+        "Изображение блюда", upload_to="images/", blank=False
     )
     text = models.TextField("Описание рецепта", max_length=500, blank=False)
     ingredients = models.ManyToManyField(
@@ -104,7 +106,6 @@ class RecipeIngredient(models.Model):
         ),
         blank=False,
     )
-    unit = models.CharField("Единицы измерения", max_length=50, blank=False)
 
     class Meta:
         constraints = (
@@ -115,6 +116,14 @@ class RecipeIngredient(models.Model):
         )
         verbose_name = "Ингредиент в рецепте"
         verbose_name_plural = "Ингредиенты в рецептах"
+
+    def __str__(self):
+        return (
+            f"{self.recipe.name}: "
+            f"{self.ingredient.name} - "
+            f"{self.amount} "
+            f"{self.ingredient.measurement_unit}"
+        )
 
 
 class FavoriteRecipe(models.Model):
@@ -149,7 +158,7 @@ class FavoriteRecipe(models.Model):
         return f"Рецепт {self.recipe} в избранном пользователя {self.user}"
 
 
-class ShoppingList(models.Model):
+class ShoppingCart(models.Model):
     """
     Модель для представления списка покупок.
 

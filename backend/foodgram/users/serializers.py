@@ -9,17 +9,17 @@ from .models import Follow
 User = get_user_model()
 
 
-# class CurrentUserDefaultId(object):
-#     """
-#     Класс-фабрика для определения идентификатора текущего пользователя.
-#     """
+class CurrentUserDefaultId(object):
+    """
+    Класс-фабрика для определения идентификатора текущего пользователя.
+    """
 
-#     requires_context = True
+    requires_context = True
 
-#     def __call__(self, serializer_instance=None):
-#         if serializer_instance is not None:
-#             self.user_id = serializer_instance.context["request"].user.id
-#             return self.user_id
+    def __call__(self, serializer_instance=None):
+        if serializer_instance is not None:
+            self.user_id = serializer_instance.context["request"].user.id
+            return self.user_id
 
 
 class CustomUserCreateSerializer(UserCreateSerializer):
@@ -39,18 +39,29 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         )
 
 
+class RecipeSerializer(serializers.ModelSerializer):
+    """Сериализатор для модели Recipe."""
+
+    class Meta:
+        model = Recipe
+        fields = "__all__"
+
+
 class CustomUserSerializer(UserSerializer):
     """
     Пользовательский сериализатор для модели User.
     """
 
     is_subscribed = serializers.SerializerMethodField(read_only=True)
+    email = serializers.EmailField(
+        required=False, allow_null=True, allow_blank=True
+    )
 
     class Meta:
         model = User
         fields = (
-            "email",
             "id",
+            "email",
             "username",
             "first_name",
             "last_name",

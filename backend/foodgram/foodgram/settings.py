@@ -1,15 +1,21 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = (
-    "django-insecure-vtq4)4tc_1u_w249g*pyf4oe+1s0zv#mzlq&u2i&jp0q37uf2g"
-)
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG").lower() == "true"
+ALLOWED_HOSTS = []
 
-DEBUG = True
+if os.getenv("ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = [
+        host.strip() for host in os.getenv("ALLOWED_HOSTS").split(",")
+    ]
 
-ALLOWED_HOSTS = ["51.250.106.197", "backend", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -98,14 +104,15 @@ if DEBUG:
 else:
     DATABASES = {
         "default": {
-            "ENGINE": os.getenv("DB_ENGINE", "django.db.backends.postgresql"),
-            "NAME": os.getenv("DB_NAME", "postgres"),
-            "USER": os.getenv("POSTGRES_USER", "postgres"),
-            "PASSWORD": os.getenv("POSTGRES_PASSWORD", "postgres"),
-            "HOST": os.getenv("DB_HOST", "db"),
-            "PORT": os.getenv("DB_PORT", 5432),
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "postgres",
+            "USER": "postgres",
+            "PASSWORD": "postgres",
+            "HOST": "db",
+            "PORT": 5432,
         }
     }
+
 
 AUTH_USER_MODEL = "users.User"
 
