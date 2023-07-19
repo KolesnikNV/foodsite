@@ -18,7 +18,9 @@ class Hex2NameColor(models.CharField):
         self.validators.append(
             validators.RegexValidator(
                 regex=r"#([a-fA-F0-9]{6})",
-                message="Введите корректное значение кода цвета в формате HEX.",
+                message=(
+                    "Введите корректное значение кода цвета в формате HEX."
+                ),
             )
         )
 

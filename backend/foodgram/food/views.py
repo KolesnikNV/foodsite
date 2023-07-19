@@ -1,6 +1,5 @@
 from django.db.models import Q
 from django.http import HttpResponse
-from django.http.response import HttpResponse
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework.decorators import action
