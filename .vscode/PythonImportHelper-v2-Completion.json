@@ -445,14 +445,6 @@
         "documentation": {}
     },
     {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -725,14 +717,6 @@
         "documentation": {}
     },
     {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -902,62 +886,6 @@
         "documentation": {}
     },
     {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "APITestCase",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "Recipe",
-        "importPath": "food.models",
-        "description": "food.models",
-        "isExtraImport": true,
-        "detail": "food.models",
-        "documentation": {}
-    },
-    {
-        "label": "Tags",
-        "importPath": "food.models",
-        "description": "food.models",
-        "isExtraImport": true,
-        "detail": "food.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ingredient",
-        "importPath": "food.models",
-        "description": "food.models",
-        "isExtraImport": true,
-        "detail": "food.models",
-        "documentation": {}
-    },
-    {
-        "label": "Recipe",
-        "importPath": "food.models",
-        "description": "food.models",
-        "isExtraImport": true,
-        "detail": "food.models",
-        "documentation": {}
-    },
-    {
         "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
@@ -972,6 +900,14 @@
         "description": "django.contrib.auth.models",
         "isExtraImport": true,
         "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -996,6 +932,14 @@
         "description": "djoser.serializers",
         "isExtraImport": true,
         "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
         "documentation": {}
     },
     {
@@ -1288,15 +1232,6 @@
         "importPath": "backend.foodgram.food.permissions",
         "description": "backend.foodgram.food.permissions",
         "peekOfCode": "class AdminOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на создание и изменение только для админов.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view):\n        return (\n            request.method in SAFE_METHODS\n            or request.user.is_authenticated\n            and request.user.is_staff",
-        "detail": "backend.foodgram.food.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "OwnerUserOrReadOnly",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.permissions",
-        "description": "backend.foodgram.food.permissions",
-        "peekOfCode": "class OwnerUserOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на создание и изменение только для админа и пользователя.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view, obj):\n        return (\n            request.method in SAFE_METHODS\n            or request.user.is_authenticated\n            and request.user == obj.author",
         "detail": "backend.foodgram.food.permissions",
         "documentation": {}
     },
@@ -1721,24 +1656,6 @@
         "description": "backend.foodgram.foodgram.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "backend.foodgram.foodgram.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeViewSetTests",
-        "kind": 6,
-        "importPath": "backend.foodgram.tests.test_recipe_view",
-        "description": "backend.foodgram.tests.test_recipe_view",
-        "peekOfCode": "class RecipeViewSetTests(APITestCase):\n    def setUp(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"testpassword\"\n        )\n        self.client.force_authenticate(user=self.user)\n        # Создаем теги и ингредиенты для тестов\n        self.tag1 = Tags.objects.create(name=\"Tag1\", slug=\"tag1\")\n        self.tag2 = Tags.objects.create(name=\"Tag2\", slug=\"tag2\")\n        self.ingredient1 = Ingredient.objects.create(name=\"Ingredient1\")",
-        "detail": "backend.foodgram.tests.test_recipe_view",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "kind": 5,
-        "importPath": "backend.foodgram.tests.test_recipe_view",
-        "description": "backend.foodgram.tests.test_recipe_view",
-        "peekOfCode": "User = get_user_model()\nclass RecipeViewSetTests(APITestCase):\n    def setUp(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"testpassword\"\n        )\n        self.client.force_authenticate(user=self.user)\n        # Создаем теги и ингредиенты для тестов\n        self.tag1 = Tags.objects.create(name=\"Tag1\", slug=\"tag1\")\n        self.tag2 = Tags.objects.create(name=\"Tag2\", slug=\"tag2\")",
-        "detail": "backend.foodgram.tests.test_recipe_view",
         "documentation": {}
     },
     {
