@@ -5,15 +5,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('food', '0006_remove_recipeingredient_measurement_unit'),
+        ("food", "0006_remove_recipeingredient_measurement_unit"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='ShoppingList',
-            new_name='ShoppingCart',
+            old_name="ShoppingList",
+            new_name="ShoppingCart",
         ),
     ]

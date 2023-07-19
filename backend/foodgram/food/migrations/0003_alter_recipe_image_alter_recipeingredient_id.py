@@ -4,20 +4,21 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('food', '0002_initial'),
+        ("food", "0002_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='recipe',
-            name='image',
-            field=models.ImageField(upload_to='media/images/', verbose_name='Изображение блюда'),
+            model_name="recipe",
+            name="image",
+            field=models.ImageField(
+                upload_to="media/images/", verbose_name="Изображение блюда"
+            ),
         ),
         migrations.AlterField(
-            model_name='recipeingredient',
-            name='id',
+            model_name="recipeingredient",
+            name="id",
             field=models.AutoField(primary_key=True, serialize=False),
         ),
     ]

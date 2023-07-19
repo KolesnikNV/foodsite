@@ -14,14 +14,9 @@ from .filters import IngredientFilter, RecipeFilter
 from .models import Ingredient, Recipe, ShoppingCart, Tags
 from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
 from .relation_hendler_for_views import RelationHandler, create_shoping_cart
-from .serializers import (
-    FavoriteRecipe,
-    IngredientSerializer,
-    RecipeListSerializer,
-    RecipeSerializer,
-    ShortRecipeSerializer,
-    TagsSerializer,
-)
+from .serializers import (FavoriteRecipe, IngredientSerializer,
+                          RecipeListSerializer, RecipeSerializer,
+                          ShortRecipeSerializer, TagsSerializer)
 
 
 class RecipeViewSet(ModelViewSet, RelationHandler):
@@ -101,9 +96,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
         self.link_model = ShoppingCart
         return self._delete_relation(Q(recipe__id=pk))
 
-    @action(
-        methods=("get",), detail=False, permission_classes=(IsAuthenticated,)
-    )
+    @action(methods=("get",), detail=False, permission_classes=(IsAuthenticated,))
     def download_shopping_cart(self, request):
         """
         Выгружает список рецептов из корзины покупок текущего пользователя в текстовый файл.
@@ -115,9 +108,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
 
         filename = f"{user.username}_shopping_cart.txt"
         shopping_cart = create_shoping_cart(user)
-        response = HttpResponse(
-            shopping_cart, content_type="text.txt; charset=utf-8"
-        )
+        response = HttpResponse(shopping_cart, content_type="text.txt; charset=utf-8")
         response["Content-Disposition"] = f"attachment; filename={filename}"
         return response
 

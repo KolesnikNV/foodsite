@@ -2,19 +2,12 @@ from django.core.validators import MinValueValidator
 from django.db import transaction
 from drf_base64.fields import Base64ImageField
 from rest_framework import exceptions, serializers
-
 from users.models import User
 from users.serializers import CustomUserSerializer
 
 from .custom_fields import Hex2NameColor
-from .models import (
-    FavoriteRecipe,
-    Ingredient,
-    Recipe,
-    RecipeIngredient,
-    ShoppingCart,
-    Tags,
-)
+from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
+                     ShoppingCart, Tags)
 
 
 class IngredientSerializer(serializers.ModelSerializer):
@@ -30,9 +23,7 @@ class RecipeIngredientSerializer(serializers.ModelSerializer):
 
     id = serializers.ReadOnlyField(source="ingredient.id")
     name = serializers.ReadOnlyField(source="ingredient.name")
-    measurement_unit = serializers.ReadOnlyField(
-        source="ingredient.measurement_unit"
-    )
+    measurement_unit = serializers.ReadOnlyField(source="ingredient.measurement_unit")
 
     class Meta:
         model = RecipeIngredient
@@ -96,7 +87,8 @@ class AuthorSerializer(serializers.ModelSerializer):
         ]
 
     def get_is_subscribed(self, obj):
-        """Получает значение, указывающее, подписан ли пользователь на автора."""
+        """Получает значение, указывающее,
+        подписан ли пользователь на автора."""
         return False
 
 
@@ -110,14 +102,17 @@ class RecipeListSerializer(serializers.ModelSerializer):
     is_in_shopping_cart = serializers.SerializerMethodField()
 
     def get_ingredients(self, obj):
-        ingredients = RecipeIngredient.objects.select_related(
-            "ingredient"
-        ).filter(recipe=obj)
+        """Получает значение, указывающее, добавлен ли ингредиент
+        в избранное у пользователя."""
+        ingredients = RecipeIngredient.objects.select_related("ingredient").filter(
+            recipe=obj
+        )
         serializer = RecipeIngredientSerializer(ingredients, many=True)
         return serializer.data
 
     def get_is_favorite(self, obj):
-        """Получает значение, указывающее, добавлен ли рецепт в избранное у пользователя."""
+        """Получает значение, указывающее, добавлен ли рецепт
+        в избранное у пользователя."""
         user = self.context["request"].user
 
         if user.is_anonymous:
@@ -126,7 +121,8 @@ class RecipeListSerializer(serializers.ModelSerializer):
         return FavoriteRecipe.objects.filter(user=user, recipe=obj).exists()
 
     def get_is_in_shopping_cart(self, obj):
-        """Получает значение, указывающее, находится ли рецепт в корзине покупок у пользователя."""
+        """Получает значение, указывающее,
+        находится ли рецепт в корзине покупок у пользователя."""
         user = self.context["request"].user
 
         if user.is_anonymous:
@@ -142,9 +138,7 @@ class RecipeListSerializer(serializers.ModelSerializer):
 class RecipeSerializer(serializers.ModelSerializer):
     """Сериализатор для модели Recipe."""
 
-    COOKING_TIME_VALIDATION_ERROR = (
-        "Время приготовления должно быть 1 или более."
-    )
+    COOKING_TIME_VALIDATION_ERROR = "Время приготовления должно быть 1 или более."
 
     TAGS_VALIDATION_ERROR = "Нужно добавить хотя бы один тег."
     INGREDIENTS_VALIDATION_ERROR = "Нужно добавить хотя бы один ингредиент."
@@ -152,15 +146,11 @@ class RecipeSerializer(serializers.ModelSerializer):
     INGREDIENT_ID_ERROR = "Неверный идентификатор ингредиента."
 
     author = AuthorSerializer(read_only=True)
-    tags = serializers.PrimaryKeyRelatedField(
-        queryset=Tags.objects.all(), many=True
-    )
+    tags = serializers.PrimaryKeyRelatedField(queryset=Tags.objects.all(), many=True)
     ingredients = RecipeIngredientInputSerializer(many=True)
     image = Base64ImageField()
     cooking_time = serializers.IntegerField(
-        validators=(
-            MinValueValidator(1, message=COOKING_TIME_VALIDATION_ERROR),
-        )
+        validators=(MinValueValidator(1, message=COOKING_TIME_VALIDATION_ERROR),)
     )
 
     def validate_tags(self, value):
@@ -170,7 +160,8 @@ class RecipeSerializer(serializers.ModelSerializer):
         return value
 
     def validate_ingredients(self, value):
-        """Проверяет, что хотя бы один ингредиент был выбран и нет повторяющихся ингредиентов."""
+        """Проверяет, что хотя бы один ингредиент
+        был выбран и нет повторяющихся ингредиентов."""
         if not value:
             raise exceptions.ValidationError(self.INGREDIENTS_VALIDATION_ERROR)
 
@@ -217,10 +208,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
         ingredient_data = self.get_ingredients_data(ingredients)
         RecipeIngredient.objects.bulk_create(
-            [
-                RecipeIngredient(recipe=recipe, **data)
-                for data in ingredient_data
-            ]
+            [RecipeIngredient(recipe=recipe, **data) for data in ingredient_data]
         )
 
         return recipe

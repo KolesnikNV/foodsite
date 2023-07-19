@@ -927,14 +927,6 @@
         "documentation": {}
     },
     {
-        "label": "TokenCreateSerializer",
-        "importPath": "djoser.serializers",
-        "description": "djoser.serializers",
-        "isExtraImport": true,
-        "detail": "djoser.serializers",
-        "documentation": {}
-    },
-    {
         "label": "Recipe",
         "importPath": "food.models",
         "description": "food.models",
@@ -997,7 +989,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0001_initial",
         "description": "backend.foodgram.food.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='FavoriteRecipe',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n            ],",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"FavoriteRecipe\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
         "detail": "backend.foodgram.food.migrations.0001_initial",
         "documentation": {}
     },
@@ -1006,7 +998,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0002_initial",
         "description": "backend.foodgram.food.migrations.0002_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('food', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='shoppinglist',\n            name='user',",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"food\", \"0001_initial\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"shoppinglist\",\n            name=\"user\",",
         "detail": "backend.foodgram.food.migrations.0002_initial",
         "documentation": {}
     },
@@ -1015,7 +1007,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
         "description": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('food', '0002_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='recipe',\n            name='image',\n            field=models.ImageField(upload_to='media/images/', verbose_name='Изображение блюда'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0002_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"recipe\",\n            name=\"image\",\n            field=models.ImageField(\n                upload_to=\"media/images/\", verbose_name=\"Изображение блюда\"",
         "detail": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
         "documentation": {}
     },
@@ -1024,7 +1016,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
         "description": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('food', '0003_alter_recipe_image_alter_recipeingredient_id'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='recipe',\n            options={'ordering': ('-pub_date',), 'verbose_name': 'Рецепт', 'verbose_name_plural': 'Рецепты'},\n        ),\n        migrations.AddField(",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0003_alter_recipe_image_alter_recipeingredient_id\"),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name=\"recipe\",\n            options={\n                \"ordering\": (\"-pub_date\",),\n                \"verbose_name\": \"Рецепт\",",
         "detail": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
         "documentation": {}
     },
@@ -1033,7 +1025,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
         "description": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('food', '0004_alter_recipe_options_recipe_pub_date_and_more'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='ingredient',\n            old_name='unit',\n            new_name='measurement_unit',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0004_alter_recipe_options_recipe_pub_date_and_more\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ingredient\",\n            old_name=\"unit\",\n            new_name=\"measurement_unit\",\n        ),",
         "detail": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
         "documentation": {}
     },
@@ -1042,7 +1034,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
         "description": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('food', '0005_rename_unit_ingredient_measurement_unit_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='recipeingredient',\n            name='measurement_unit',\n        ),\n    ]",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0005_rename_unit_ingredient_measurement_unit_and_more\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"recipeingredient\",\n            name=\"measurement_unit\",\n        ),\n    ]",
         "detail": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
         "documentation": {}
     },
@@ -1051,7 +1043,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
         "description": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('food', '0006_remove_recipeingredient_measurement_unit'),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name='ShoppingList',\n            new_name='ShoppingCart',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        (\"food\", \"0006_remove_recipeingredient_measurement_unit\"),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name=\"ShoppingList\",\n            new_name=\"ShoppingCart\",\n        ),",
         "detail": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
         "documentation": {}
     },
@@ -1168,7 +1160,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class Ingredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False)\n    measurement_unit = models.CharField(\n        \"Единицы измерения\", max_length=50, blank=False\n    )\n    class Meta:\n        verbose_name = \"Ингредиент\"",
+        "peekOfCode": "class Ingredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False)\n    measurement_unit = models.CharField(\"Единицы измерения\", max_length=50, blank=False)\n    class Meta:\n        verbose_name = \"Ингредиент\"\n        verbose_name_plural = \"Ингредиенты\"\n    def __str__(self) -> str:",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1177,7 +1169,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class Tags(models.Model):\n    \"\"\"\n    Модель для представления тега.\n    \"\"\"\n    name = models.CharField(\n        \"Название\", max_length=100, blank=False, unique=True\n    )\n    color = models.CharField(\"Цвет\", max_length=7, blank=False, unique=True)\n    slug = models.SlugField(\"Слаг\", unique=True, blank=False)\n    class Meta:",
+        "peekOfCode": "class Tags(models.Model):\n    \"\"\"\n    Модель для представления тега.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False, unique=True)\n    color = models.CharField(\"Цвет\", max_length=7, blank=False, unique=True)\n    slug = models.SlugField(\"Слаг\", unique=True, blank=False)\n    class Meta:\n        verbose_name = \"Тэг\"\n        verbose_name_plural = \"Тэги\"",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1258,7 +1250,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.serializers",
         "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class IngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Ingredient.\"\"\"\n    class Meta:\n        model = Ingredient\n        fields = [\"id\", \"name\", \"measurement_unit\"]\nclass RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(",
+        "peekOfCode": "class IngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Ingredient.\"\"\"\n    class Meta:\n        model = Ingredient\n        fields = [\"id\", \"name\", \"measurement_unit\"]\nclass RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(source=\"ingredient.measurement_unit\")",
         "detail": "backend.foodgram.food.serializers",
         "documentation": {}
     },
@@ -1267,7 +1259,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.serializers",
         "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(\n        source=\"ingredient.measurement_unit\"\n    )\n    class Meta:\n        model = RecipeIngredient\n        fields = (",
+        "peekOfCode": "class RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(source=\"ingredient.measurement_unit\")\n    class Meta:\n        model = RecipeIngredient\n        fields = (\n            \"id\",\n            \"name\",",
         "detail": "backend.foodgram.food.serializers",
         "documentation": {}
     },
@@ -1312,7 +1304,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.serializers",
         "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeListSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для списка рецептов.\"\"\"\n    author = CustomUserSerializer(read_only=True)\n    tags = TagsSerializer(many=True)\n    ingredients = serializers.SerializerMethodField()\n    is_favorite = serializers.SerializerMethodField()\n    is_in_shopping_cart = serializers.SerializerMethodField()\n    def get_ingredients(self, obj):\n        ingredients = RecipeIngredient.objects.select_related(\n            \"ingredient\"",
+        "peekOfCode": "class RecipeListSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для списка рецептов.\"\"\"\n    author = CustomUserSerializer(read_only=True)\n    tags = TagsSerializer(many=True)\n    ingredients = serializers.SerializerMethodField()\n    is_favorite = serializers.SerializerMethodField()\n    is_in_shopping_cart = serializers.SerializerMethodField()\n    def get_ingredients(self, obj):\n        \"\"\"Получает значение, указывающее, добавлен ли ингредиент\n        в избранное у пользователя.\"\"\"",
         "detail": "backend.foodgram.food.serializers",
         "documentation": {}
     },
@@ -1321,7 +1313,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.serializers",
         "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    COOKING_TIME_VALIDATION_ERROR = (\n        \"Время приготовления должно быть 1 или более.\"\n    )\n    TAGS_VALIDATION_ERROR = \"Нужно добавить хотя бы один тег.\"\n    INGREDIENTS_VALIDATION_ERROR = \"Нужно добавить хотя бы один ингредиент.\"\n    DUPLICATE_INGREDIENTS_VALIDATION_ERROR = \"Ингредиенты не могут повторяться\"\n    INGREDIENT_ID_ERROR = \"Неверный идентификатор ингредиента.\"\n    author = AuthorSerializer(read_only=True)",
+        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    COOKING_TIME_VALIDATION_ERROR = \"Время приготовления должно быть 1 или более.\"\n    TAGS_VALIDATION_ERROR = \"Нужно добавить хотя бы один тег.\"\n    INGREDIENTS_VALIDATION_ERROR = \"Нужно добавить хотя бы один ингредиент.\"\n    DUPLICATE_INGREDIENTS_VALIDATION_ERROR = \"Ингредиенты не могут повторяться\"\n    INGREDIENT_ID_ERROR = \"Неверный идентификатор ингредиента.\"\n    author = AuthorSerializer(read_only=True)\n    tags = serializers.PrimaryKeyRelatedField(queryset=Tags.objects.all(), many=True)\n    ingredients = RecipeIngredientInputSerializer(many=True)",
         "detail": "backend.foodgram.food.serializers",
         "documentation": {}
     },
@@ -1411,7 +1403,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1420,7 +1412,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1429,7 +1421,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
+        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1438,7 +1430,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1546,7 +1538,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"ru-RU\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "LANGUAGE_CODE = \"ru-RU\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1555,7 +1547,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1564,7 +1556,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1573,7 +1565,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "USE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,",
+        "peekOfCode": "USE_TZ = True\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1582,7 +1574,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1591,7 +1583,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "STATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {",
+        "peekOfCode": "STATIC_ROOT = \"/app/static/\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {\n            \"level\": \"DEBUG\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1600,7 +1592,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "MEDIA_URL = \"/media/\"\n# MEDIA_ROOT = \"/app/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {\n            \"level\": \"DEBUG\",",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {\n            \"level\": \"DEBUG\",\n            \"class\": \"logging.FileHandler\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1609,7 +1601,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {\n            \"level\": \"DEBUG\",\n            \"class\": \"logging.FileHandler\",\n            \"filename\": \"errors.log\",",
+        "peekOfCode": "MEDIA_ROOT = \"/app/media/\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"handlers\": {\n        \"file\": {\n            \"level\": \"DEBUG\",\n            \"class\": \"logging.FileHandler\",\n            \"filename\": \"errors.log\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1636,7 +1628,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.urls",
         "description": "backend.foodgram.foodgram.urls",
-        "peekOfCode": "api_patterns = [\n    path(\"\", include(\"users.urls\", namespace=\"api_users\")),\n    path(\"\", include(\"food.urls\", namespace=\"api_food\")),\n]\nurlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(",
+        "peekOfCode": "api_patterns = [\n    path(\"\", include(\"users.urls\", namespace=\"api_users\")),\n    path(\"\", include(\"food.urls\", namespace=\"api_food\")),\n]\nurlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "backend.foodgram.foodgram.urls",
         "documentation": {}
     },
@@ -1645,7 +1637,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.urls",
         "description": "backend.foodgram.foodgram.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(\n        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT\n    )",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "backend.foodgram.foodgram.urls",
         "documentation": {}
     },
@@ -1663,7 +1655,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0001_initial",
         "description": "backend.foodgram.users.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"auth\", \"0012_alter_user_first_name_max_length\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (",
         "detail": "backend.foodgram.users.migrations.0001_initial",
         "documentation": {}
     },
@@ -1672,7 +1664,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0002_alter_user_role",
         "description": "backend.foodgram.users.migrations.0002_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('admin', 'admin'), ('moderator', 'moderator'), ('user', 'user')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0002_alter_user_role",
         "documentation": {}
     },
@@ -1681,7 +1673,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0003_alter_user_role",
         "description": "backend.foodgram.users.migrations.0003_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0002_alter_user_role'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('user', 'user'), ('admin', 'admin'), ('moderator', 'moderator')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0002_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0003_alter_user_role",
         "documentation": {}
     },
@@ -1690,7 +1682,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0004_alter_user_role",
         "description": "backend.foodgram.users.migrations.0004_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0003_alter_user_role'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('admin', 'admin'), ('moderator', 'moderator'), ('user', 'user')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0003_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0004_alter_user_role",
         "documentation": {}
     },
@@ -1699,7 +1691,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0005_alter_user_role",
         "description": "backend.foodgram.users.migrations.0005_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0004_alter_user_role'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('moderator', 'moderator'), ('user', 'user'), ('admin', 'admin')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0004_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0005_alter_user_role",
         "documentation": {}
     },
@@ -1708,7 +1700,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0006_alter_user_role",
         "description": "backend.foodgram.users.migrations.0006_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0005_alter_user_role'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('moderator', 'moderator'), ('admin', 'admin'), ('user', 'user')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0005_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0006_alter_user_role",
         "documentation": {}
     },
@@ -1717,7 +1709,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.migrations.0007_alter_user_role",
         "description": "backend.foodgram.users.migrations.0007_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0006_alter_user_role'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='role',\n            field=models.CharField(choices=[('user', 'Пользователь'), ('moderator', 'Модератор'), ('admin', 'Администратор')], default='admin', max_length=20, verbose_name='Статус'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0006_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
         "detail": "backend.foodgram.users.migrations.0007_alter_user_role",
         "documentation": {}
     },
@@ -1798,7 +1790,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.serializers",
         "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class CustomUserSerializer(UserSerializer):\n    \"\"\"\n    Пользовательский сериализатор для модели User.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    email = serializers.EmailField(\n        required=False, allow_null=True, allow_blank=True\n    )\n    class Meta:\n        model = User",
+        "peekOfCode": "class CustomUserSerializer(UserSerializer):\n    \"\"\"\n    Пользовательский сериализатор для модели User.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    email = serializers.EmailField(required=False, allow_null=True, allow_blank=True)\n    class Meta:\n        model = User\n        fields = (\n            \"id\",",
         "detail": "backend.foodgram.users.serializers",
         "documentation": {}
     },
@@ -1816,7 +1808,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.serializers",
         "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(\n        method_name=\"get_is_subscribed\"\n    )\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    recipes_count = serializers.SerializerMethodField(\n        method_name=\"get_recipes_count\"",
+        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(method_name=\"get_is_subscribed\")\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    recipes_count = serializers.SerializerMethodField(method_name=\"get_recipes_count\")\n    class Meta:\n        model = User\n        fields = [",
         "detail": "backend.foodgram.users.serializers",
         "documentation": {}
     },
@@ -1852,17 +1844,8 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.urls",
         "description": "backend.foodgram.users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(r\"\", include(api_router_v1.urls)),\n    path(r\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),\n    path(r\"users/<int:pk>/subscribe/\", follow_author, name=\"follow-author\"),\n    path(\n        r\"auth/token/logout/\", CustomTokenDestroyView.as_view(), name=\"logout\"\n    ),\n    path(r\"\", include(\"djoser.urls\")),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(r\"\", include(api_router_v1.urls)),\n    path(r\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),\n    path(r\"users/<int:pk>/subscribe/\", follow_author, name=\"follow-author\"),\n    path(r\"auth/token/logout/\", CustomTokenDestroyView.as_view(), name=\"logout\"),\n    path(r\"\", include(\"djoser.urls\")),\n]",
         "detail": "backend.foodgram.users.urls",
-        "documentation": {}
-    },
-    {
-        "label": "CustomTokenCreateSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "class CustomTokenCreateSerializer(TokenCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания токена аутентификации.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields.pop(\"username\")\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):",
-        "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
     {
@@ -1897,7 +1880,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass CustomTokenCreateSerializer(TokenCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания токена аутентификации.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields.pop(\"username\")",
+        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1906,7 +1889,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass CustomTokenCreateSerializer(TokenCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания токена аутентификации.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields.pop(\"username\")\n@api_view([\"POST\", \"DELETE\"])",
+        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)\n    author = get_object_or_404(User, pk=pk)",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1915,7 +1898,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass CustomTokenCreateSerializer(TokenCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания токена аутентификации.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields.pop(\"username\")\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])",
+        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)\n    author = get_object_or_404(User, pk=pk)\n    if request.method == \"POST\":",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1924,7 +1907,7 @@
         "kind": 2,
         "importPath": "backend.foodgram.manage",
         "description": "backend.foodgram.manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'foodgram.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"foodgram.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "backend.foodgram.manage",
         "documentation": {}
     }

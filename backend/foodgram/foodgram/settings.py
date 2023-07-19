@@ -12,9 +12,7 @@ DEBUG = os.getenv("DEBUG").lower() == "true"
 ALLOWED_HOSTS = []
 
 if os.getenv("ALLOWED_HOSTS"):
-    ALLOWED_HOSTS = [
-        host.strip() for host in os.getenv("ALLOWED_HOSTS").split(",")
-    ]
+    ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS").split(",")]
 
 
 INSTALLED_APPS = [
@@ -143,8 +141,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = "/app/static/"
 
 MEDIA_URL = "/media/"
-# MEDIA_ROOT = "/app/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = "/app/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

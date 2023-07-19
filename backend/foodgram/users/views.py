@@ -3,7 +3,6 @@ from django.db import IntegrityError
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from djoser import utils
-from djoser.serializers import TokenCreateSerializer
 from djoser.views import TokenDestroyView
 from rest_framework import filters, status
 from rest_framework.decorators import api_view, permission_classes
@@ -17,16 +16,6 @@ from .serializers import SubscriptionSerializer
 ERROR_SUBSCRIBE_SELF = "Нельзя подписаться на себя"
 ERROR_ALREADY_SUBSCRIBED = "Вы уже подписаны на данного автора"
 ERROR_NOT_SUBSCRIBED = "Вы не подписаны на данного автора"
-
-
-class CustomTokenCreateSerializer(TokenCreateSerializer):
-    """
-    Пользовательский сериализатор для создания токена аутентификации.
-    """
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields.pop("username")
 
 
 @api_view(["POST", "DELETE"])
