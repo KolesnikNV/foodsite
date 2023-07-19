@@ -70,7 +70,9 @@ class CustomUserSerializer(UserSerializer):
 
     def get_is_subscribed(self, obj):
         """
-        Возвращает информацию о том, подписан ли текущий пользователь на переданного пользователя.
+        Возвращает информацию о том,
+        подписан ли текущий пользователь на
+        переданного пользователя.
         """
         request = self.context.get("request")
         if not request or request.user.is_anonymous:
@@ -118,7 +120,9 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
     def get_is_subscribed(self, obj):
         """
-        Возвращает информацию о том, подписан ли текущий пользователь на переданного пользователя.
+        Возвращает информацию о том,
+        подписан ли текущий пользователь на
+        переданного пользователя.
         """
         user = self.context.get("request").user
         if not user:
@@ -127,7 +131,8 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
     def get_recipes(self, obj):
         """
-        Возвращает информацию о рецептах пользователя, на которого подписан текущий пользователь.
+        Возвращает информацию о рецептах пользователя,
+        на которого подписан текущий пользователь.
         """
         request = self.context.get("request")
         recipes = obj.recipe_set.all()[:6]

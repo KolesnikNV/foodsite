@@ -49,7 +49,8 @@ class RecipeFilter(filters.FilterSet):
 
     def get_is_favorited(self, queryset, name, value):
         """
-        Фильтрует рецепты на основе того, добавлены ли они в избранное пользователем или нет.
+        Фильтрует рецепты на основе того,
+        добавлены ли они в избранное пользователем или нет.
         """
         request = self.request
         user = request.user
@@ -61,7 +62,8 @@ class RecipeFilter(filters.FilterSet):
 
     def get_is_in_shopping_cart(self, queryset, name, value):
         """
-        Фильтрует рецепты на основе того, находятся ли они в списке покупок пользователя или нет.
+        Фильтрует рецепты на основе того,
+        находятся ли они в списке покупок пользователя или нет.
         """
         if value:
             return queryset.filter(shopping_recipe__user=self.request.user)

@@ -6,7 +6,8 @@ from sqlalchemy import create_engine
 
 class Command(BaseCommand):
     """
-    Команда управления Django для заполнения базы данных из предоставленных файлов.
+    Команда управления Django для заполнения
+    базы данных из предоставленных файлов.
     """
 
     def __init__(self, *args, **kwargs):
@@ -54,8 +55,10 @@ class Command(BaseCommand):
 
     def remove_duplicates(self):
         """
-        Удаляет дублирующиеся строки из таблицы 'food_ingredient' на основе столбца 'name'.
-        Сохраняет строку с минимальным значением 'id' для каждого дублирующегося имени.
+        Удаляет дублирующиеся строки из таблицы
+        'food_ingredient' на основе столбца 'name'.
+        Сохраняет строку с минимальным значением
+        'id' для каждого дублирующегося имени.
         """
         with connection.cursor() as cursor:
             select_query = """

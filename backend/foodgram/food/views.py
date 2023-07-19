@@ -27,7 +27,8 @@ from .serializers import (
 class RecipeViewSet(ModelViewSet, RelationHandler):
     """
     ViewSet для модели Recipe.
-    Поддерживает операции CRUD (create, retrieve, update, delete) и список рецептов.
+    Поддерживает операции CRUD
+    (create, retrieve, update, delete) и список рецептов.
 
     """
 
@@ -106,7 +107,8 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
     )
     def download_shopping_cart(self, request):
         """
-        Выгружает список рецептов из корзины покупок текущего пользователя в текстовый файл.
+        Выгружает список рецептов из корзины
+        покупок текущего пользователя в текстовый файл.
 
         """
         user = request.user
@@ -137,7 +139,8 @@ class TagsViewSet(ReadOnlyModelViewSet):
 class IngredientViewSet(ReadOnlyModelViewSet):
     """
     ViewSet для модели Ingredient.
-    Поддерживает только операции чтения списка ингредиентов и деталей отдельного ингредиента.
+    Поддерживает только операции чтения
+    списка ингредиентов и деталей отдельного ингредиента.
 
     """
 
