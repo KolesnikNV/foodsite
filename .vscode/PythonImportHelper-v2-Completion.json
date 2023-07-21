@@ -1,374 +1,10 @@
 [
     {
-        "label": "pandas",
-        "kind": 6,
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
         "isExtraImport": true,
-        "importPath": "pandas",
-        "description": "pandas",
-        "detail": "pandas",
-        "documentation": {}
-    },
-    {
-        "label": "BaseCommand",
-        "importPath": "django.core.management.base",
-        "description": "django.core.management.base",
-        "isExtraImport": true,
-        "detail": "django.core.management.base",
-        "documentation": {}
-    },
-    {
-        "label": "connection",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "transaction",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "IntegrityError",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "create_engine",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "django.core.validators",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "MinValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "MinValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "django.utils.timezone",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.utils.timezone",
-        "description": "django.utils.timezone",
-        "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -388,152 +24,39 @@
         "documentation": {}
     },
     {
-        "label": "base64",
-        "kind": 6,
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "importPath": "base64",
-        "description": "base64",
-        "detail": "base64",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "validators",
-        "importPath": "django.core",
-        "description": "django.core",
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "django.core",
+        "detail": "typing",
         "documentation": {}
     },
     {
-        "label": "ContentFile",
-        "importPath": "django.core.files.base",
-        "description": "django.core.files.base",
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "django.core.files.base",
+        "detail": "typing",
         "documentation": {}
     },
     {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "exceptions",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "filters",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "filters",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "rest_framework",
-        "importPath": "django_filters",
-        "description": "django_filters",
-        "isExtraImport": true,
-        "detail": "django_filters",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "users.models",
-        "description": "users.models",
-        "isExtraImport": true,
-        "detail": "users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "users.models",
-        "description": "users.models",
-        "isExtraImport": true,
-        "detail": "users.models",
-        "documentation": {}
-    },
-    {
-        "label": "SAFE_METHODS",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "BasePermission",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
+        "detail": "typing",
         "documentation": {}
     },
     {
         "label": "F",
-        "importPath": "django.db.models",
-        "description": "django.db.models",
-        "isExtraImport": true,
-        "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
-        "label": "Model",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,
@@ -550,6 +73,14 @@
     },
     {
         "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,
@@ -669,6 +200,166 @@
         "documentation": {}
     },
     {
+        "label": "Ingredient",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "ShoppingCart",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteRecipe",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ingredient",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeIngredient",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "ShoppingCart",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ingredient",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectDoesNotExist",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "IntegrityError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
+        "isExtraImport": true,
+        "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
+        "isExtraImport": true,
+        "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
         "label": "Base64ImageField",
         "importPath": "drf_base64.fields",
         "description": "drf_base64.fields",
@@ -677,11 +368,83 @@
         "documentation": {}
     },
     {
-        "label": "CustomUserSerializer",
-        "importPath": "users.serializers",
-        "description": "users.serializers",
+        "label": "exceptions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "users.serializers",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "Hex2NameColor",
+        "importPath": "food.custom_fields",
+        "description": "food.custom_fields",
+        "isExtraImport": true,
+        "detail": "food.custom_fields",
+        "documentation": {}
+    },
+    {
+        "label": "Follow",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
         "documentation": {}
     },
     {
@@ -717,19 +480,19 @@
         "documentation": {}
     },
     {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "TokenCreateView",
+        "importPath": "djoser.views",
+        "description": "djoser.views",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "djoser.views",
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "TokenDestroyView",
+        "importPath": "djoser.views",
+        "description": "djoser.views",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "djoser.views",
         "documentation": {}
     },
     {
@@ -741,11 +504,157 @@
         "documentation": {}
     },
     {
-        "label": "DefaultRouter",
-        "importPath": "rest_framework.routers",
-        "description": "rest_framework.routers",
+        "label": "IngredientViewSet",
+        "importPath": "food.views",
+        "description": "food.views",
         "isExtraImport": true,
-        "detail": "rest_framework.routers",
+        "detail": "food.views",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeViewSet",
+        "importPath": "food.views",
+        "description": "food.views",
+        "isExtraImport": true,
+        "detail": "food.views",
+        "documentation": {}
+    },
+    {
+        "label": "TagsViewSet",
+        "importPath": "food.views",
+        "description": "food.views",
+        "isExtraImport": true,
+        "detail": "food.views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenDestroyView",
+        "importPath": "users.views",
+        "description": "users.views",
+        "isExtraImport": true,
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionListView",
+        "importPath": "users.views",
+        "description": "users.views",
+        "isExtraImport": true,
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "FollowAuthorView",
+        "importPath": "users.views",
+        "description": "users.views",
+        "isExtraImport": true,
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "validators",
+        "importPath": "django.core",
+        "description": "django.core",
+        "isExtraImport": true,
+        "detail": "django.core",
+        "documentation": {}
+    },
+    {
+        "label": "ContentFile",
+        "importPath": "django.core.files.base",
+        "description": "django.core.files.base",
+        "isExtraImport": true,
+        "detail": "django.core.files.base",
+        "documentation": {}
+    },
+    {
+        "label": "rest_framework",
+        "importPath": "django_filters",
+        "description": "django_filters",
+        "isExtraImport": true,
+        "detail": "django_filters",
+        "documentation": {}
+    },
+    {
+        "label": "SAFE_METHODS",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "BasePermission",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
         "documentation": {}
     },
     {
@@ -754,22 +663,6 @@
         "description": "django.http",
         "isExtraImport": true,
         "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http.response",
-        "description": "django.http.response",
-        "isExtraImport": true,
-        "detail": "django.http.response",
         "documentation": {}
     },
     {
@@ -789,15 +682,7 @@
         "documentation": {}
     },
     {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "permission_classes",
+        "label": "action",
         "importPath": "rest_framework.decorators",
         "description": "rest_framework.decorators",
         "isExtraImport": true,
@@ -837,6 +722,94 @@
         "documentation": {}
     },
     {
+        "label": "ViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "MultiSerializerViewSetMixin",
+        "importPath": "api.mixin",
+        "description": "api.mixin",
+        "isExtraImport": true,
+        "detail": "api.mixin",
+        "documentation": {}
+    },
+    {
+        "label": "RelationHandler",
+        "importPath": "api.relation_handler_for_views",
+        "description": "api.relation_handler_for_views",
+        "isExtraImport": true,
+        "detail": "api.relation_handler_for_views",
+        "documentation": {}
+    },
+    {
+        "label": "create_shoping_cart",
+        "importPath": "api.relation_handler_for_views",
+        "description": "api.relation_handler_for_views",
+        "isExtraImport": true,
+        "detail": "api.relation_handler_for_views",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteRecipe",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "IngredientSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeListSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ShortRecipeSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TagsSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -870,14 +843,6 @@
         "documentation": {}
     },
     {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "isExtraImport": true,
-        "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -886,76 +851,11 @@
         "documentation": {}
     },
     {
-        "label": "django.contrib.auth.models",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
         "label": "AbstractUser",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
         "isExtraImport": true,
         "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "UserCreateSerializer",
-        "importPath": "djoser.serializers",
-        "description": "djoser.serializers",
-        "isExtraImport": true,
-        "detail": "djoser.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UserSerializer",
-        "importPath": "djoser.serializers",
-        "description": "djoser.serializers",
-        "isExtraImport": true,
-        "detail": "djoser.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "Recipe",
-        "importPath": "food.models",
-        "description": "food.models",
-        "isExtraImport": true,
-        "detail": "food.models",
-        "documentation": {}
-    },
-    {
-        "label": "TokenCreateView",
-        "importPath": "djoser.views",
-        "description": "djoser.views",
-        "isExtraImport": true,
-        "detail": "djoser.views",
-        "documentation": {}
-    },
-    {
-        "label": "TokenDestroyView",
-        "importPath": "djoser.views",
-        "description": "djoser.views",
-        "isExtraImport": true,
-        "detail": "djoser.views",
-        "documentation": {}
-    },
-    {
-        "label": "ObjectDoesNotExist",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
         "documentation": {}
     },
     {
@@ -976,75 +876,219 @@
         "documentation": {}
     },
     {
+        "label": "ApiConfig",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.apps",
+        "description": "backend.foodgram.api.apps",
+        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"api\"",
+        "detail": "backend.foodgram.api.apps",
+        "documentation": {}
+    },
+    {
+        "label": "MultiSerializerViewSetMixin",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.mixin",
+        "description": "backend.foodgram.api.mixin",
+        "peekOfCode": "class MultiSerializerViewSetMixin:\n    \"\"\"Mixin for selecting an appropriate serializer from `serializer_classes`.\"\"\"\n    serializer_classes: Optional[dict[str, Type[Serializer]]] = None\n    def get_serializer_class(self):\n        try:\n            return self.serializer_classes[self.action]\n        except KeyError:\n            return super().get_serializer_class()",
+        "detail": "backend.foodgram.api.mixin",
+        "documentation": {}
+    },
+    {
+        "label": "RelationHandler",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.relation_handler_for_views",
+        "description": "backend.foodgram.api.relation_handler_for_views",
+        "peekOfCode": "class RelationHandler:\n    add_serializer: ModelSerializer\n    def _create_relation(self, model_class, obj_id):\n        obj = get_object_or_404(self.queryset, pk=obj_id)\n        try:\n            model_class(None, obj.pk, self.request.user.pk).save()\n        except IntegrityError:\n            return Response(\n                {\"error\": \"Рецепт уже был добавлен.\"},\n                status=HTTP_400_BAD_REQUEST,",
+        "detail": "backend.foodgram.api.relation_handler_for_views",
+        "documentation": {}
+    },
+    {
+        "label": "create_shoping_cart",
+        "kind": 2,
+        "importPath": "backend.foodgram.api.relation_handler_for_views",
+        "description": "backend.foodgram.api.relation_handler_for_views",
+        "peekOfCode": "def create_shoping_cart(user):\n    shopping_cart = []\n    shopping_carts = ShoppingCart.objects.filter(user=user)\n    if not shopping_carts.exists():\n        return shopping_cart\n    ingredients = (\n        Ingredient.objects.filter(\n            recipeingredient__recipe__shopping_recipe__in=shopping_carts\n        )\n        .values(\"name\", measurement=F(\"measurement_unit\"))",
+        "detail": "backend.foodgram.api.relation_handler_for_views",
+        "documentation": {}
+    },
+    {
+        "label": "CurrentUserDefaultId",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class CurrentUserDefaultId(object):\n    \"\"\"\n    Класс-фабрика для определения идентификатора текущего пользователя.\n    \"\"\"\n    requires_context = True\n    def __call__(self, serializer_instance=None):\n        if serializer_instance is not None:\n            self.user_id = serializer_instance.context[\"request\"].user.id\n            return self.user_id\nclass CustomUserCreateSerializer(UserCreateSerializer):",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserCreateSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class CustomUserCreateSerializer(UserCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания пользователя.\n    \"\"\"\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"id\",\n            \"username\",",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    class Meta:\n        model = Recipe\n        fields = [\n            \"id\",\n            \"author\",\n            \"name\",\n            \"image\",\n            \"text\",",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class CustomUserSerializer(UserSerializer):\n    \"\"\"\n    Пользовательский сериализатор для модели User.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    email = serializers.EmailField(\n        required=False, allow_null=True, allow_blank=True\n    )\n    class Meta:\n        model = User",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FollowRecipeSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class FollowRecipeSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для краткой информации о рецепте в подписках.\n    \"\"\"\n    class Meta:\n        model = Recipe\n        fields = [\"id\", \"name\", \"image\", \"cooking_time\"]\nclass SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(\n        method_name=\"get_is_subscribed\"\n    )\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    class Meta:\n        model = User",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "IngredientSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class IngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Ingredient.\"\"\"\n    class Meta:\n        model = Ingredient\n        fields = [\"id\", \"name\", \"measurement_unit\"]\nclass RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeIngredientSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(\n        source=\"ingredient.measurement_unit\"\n    )\n    class Meta:\n        model = RecipeIngredient\n        fields = (",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeIngredientInputSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeIngredientInputSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для входных данных модели RecipeIngredient.\"\"\"\n    id = serializers.IntegerField()\n    class Meta:\n        model = RecipeIngredient\n        fields = [\"id\", \"amount\"]\nclass TagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Tags.\"\"\"\n    color = Hex2NameColor()\n    class Meta:",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TagsSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class TagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Tags.\"\"\"\n    color = Hex2NameColor()\n    class Meta:\n        model = Tag\n        fields = [\"id\", \"name\", \"color\", \"slug\"]\nclass RecipeTagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для связи модели Recipe с моделью Tags.\"\"\"\n    class Meta:\n        model = Tag",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeTagsSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeTagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для связи модели Recipe с моделью Tags.\"\"\"\n    class Meta:\n        model = Tag\n        fields = [\"id\"]\n    def to_internal_value(self, data):\n        \"\"\"Преобразует внешнее значение во внутреннее представление.\"\"\"\n        if isinstance(data, list):\n            return [int(item) for item in data]\n        return super().to_internal_value(data)",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class AuthorSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели User, представляющий автора рецепта.\"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeListSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeListSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для списка рецептов.\"\"\"\n    author = CustomUserSerializer(read_only=True)\n    tags = TagsSerializer(many=True)\n    ingredients = serializers.SerializerMethodField()\n    is_favorite = serializers.SerializerMethodField()\n    is_in_shopping_cart = serializers.SerializerMethodField()\n    def get_ingredients(self, obj):\n        \"\"\"Получает значение, указывающее, добавлен ли ингредиент\n        в избранное у пользователя.\"\"\"",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    COOKING_TIME_VALIDATION_ERROR = (\n        \"Время приготовления должно быть 1 или более.\"\n    )\n    TAGS_VALIDATION_ERROR = \"Нужно добавить хотя бы один тег.\"\n    INGREDIENTS_VALIDATION_ERROR = \"Нужно добавить хотя бы один ингредиент.\"\n    DUPLICATE_INGREDIENTS_VALIDATION_ERROR = \"Ингредиенты не могут повторяться\"\n    INGREDIENT_ID_ERROR = \"Неверный идентификатор ингредиента.\"\n    name = serializers.CharField(required=True, allow_blank=False)",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ShortRecipeSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class ShortRecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для краткого представления рецепта.\"\"\"\n    image = Base64ImageField()\n    class Meta:\n        model = Recipe\n        fields = (\"id\", \"name\", \"image\", \"cooking_time\")\nclass ShoppingCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ShoppingCart\n        fields = (\"recipe\",)",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ShoppingCartSerializer",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.serializers",
+        "description": "backend.foodgram.api.serializers",
+        "peekOfCode": "class ShoppingCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ShoppingCart\n        fields = (\"recipe\",)",
+        "detail": "backend.foodgram.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.urls",
+        "description": "backend.foodgram.api.urls",
+        "peekOfCode": "app_name = \"api\"\nrouter = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)",
+        "detail": "backend.foodgram.api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.urls",
+        "description": "backend.foodgram.api.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)\nrouter.register(",
+        "detail": "backend.foodgram.api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.urls",
+        "description": "backend.foodgram.api.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", include(router.urls)),\n    path(\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),\n    path(\n        \"auth/token/logout/\", CustomTokenDestroyView.as_view(), name=\"logout\"\n    ),\n    path(\"\", include(\"djoser.urls\")),\n]",
+        "detail": "backend.foodgram.api.urls",
+        "documentation": {}
+    },
+    {
         "label": "Command",
         "kind": 6,
         "importPath": "backend.foodgram.core.commands",
         "description": "backend.foodgram.core.commands",
-        "peekOfCode": "class Command(BaseCommand):\n    \"\"\"\n    Команда управления Django для заполнения базы данных из предоставленных файлов.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.db = {\n            \"data/ingredients.csv\": \"food_ingredient\",\n            \"data/tags.csv\": \"food_tags\",\n        }",
+        "peekOfCode": "class Command(BaseCommand):\n    \"\"\"\n    Команда управления Django для заполнения\n    базы данных из предоставленных файлов.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.db = {\n            \"data/ingredients.csv\": Ingredient,\n            \"data/tags.csv\": Tag,",
         "detail": "backend.foodgram.core.commands",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0001_initial",
-        "description": "backend.foodgram.food.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"FavoriteRecipe\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
-        "detail": "backend.foodgram.food.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0002_initial",
-        "description": "backend.foodgram.food.migrations.0002_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"food\", \"0001_initial\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"shoppinglist\",\n            name=\"user\",",
-        "detail": "backend.foodgram.food.migrations.0002_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
-        "description": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0002_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"recipe\",\n            name=\"image\",\n            field=models.ImageField(\n                upload_to=\"media/images/\", verbose_name=\"Изображение блюда\"",
-        "detail": "backend.foodgram.food.migrations.0003_alter_recipe_image_alter_recipeingredient_id",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
-        "description": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0003_alter_recipe_image_alter_recipeingredient_id\"),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name=\"recipe\",\n            options={\n                \"ordering\": (\"-pub_date\",),\n                \"verbose_name\": \"Рецепт\",",
-        "detail": "backend.foodgram.food.migrations.0004_alter_recipe_options_recipe_pub_date_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
-        "description": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0004_alter_recipe_options_recipe_pub_date_and_more\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ingredient\",\n            old_name=\"unit\",\n            new_name=\"measurement_unit\",\n        ),",
-        "detail": "backend.foodgram.food.migrations.0005_rename_unit_ingredient_measurement_unit_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
-        "description": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"food\", \"0005_rename_unit_ingredient_measurement_unit_and_more\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"recipeingredient\",\n            name=\"measurement_unit\",\n        ),\n    ]",
-        "detail": "backend.foodgram.food.migrations.0006_remove_recipeingredient_measurement_unit",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
-        "description": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        (\"food\", \"0006_remove_recipeingredient_measurement_unit\"),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name=\"ShoppingList\",\n            new_name=\"ShoppingCart\",\n        ),",
-        "detail": "backend.foodgram.food.migrations.0007_rename_shoppinglist_shoppingcart",
         "documentation": {}
     },
     {
@@ -1160,16 +1204,16 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class Ingredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False)\n    measurement_unit = models.CharField(\"Единицы измерения\", max_length=50, blank=False)\n    class Meta:\n        verbose_name = \"Ингредиент\"\n        verbose_name_plural = \"Ингредиенты\"\n    def __str__(self) -> str:",
+        "peekOfCode": "class Ingredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False)\n    measurement_unit = models.CharField(\n        \"Единицы измерения\", max_length=50, blank=False\n    )\n    class Meta:\n        verbose_name = \"Ингредиент\"",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
     {
-        "label": "Tags",
+        "label": "Tag",
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class Tags(models.Model):\n    \"\"\"\n    Модель для представления тега.\n    \"\"\"\n    name = models.CharField(\"Название\", max_length=100, blank=False, unique=True)\n    color = models.CharField(\"Цвет\", max_length=7, blank=False, unique=True)\n    slug = models.SlugField(\"Слаг\", unique=True, blank=False)\n    class Meta:\n        verbose_name = \"Тэг\"\n        verbose_name_plural = \"Тэги\"",
+        "peekOfCode": "class Tag(models.Model):\n    \"\"\"\n    Модель для представления тега.\n    \"\"\"\n    name = models.CharField(\n        \"Название\", max_length=100, blank=False, unique=True\n    )\n    color = models.CharField(\"Цвет\", max_length=7, blank=False, unique=True)\n    slug = models.SlugField(\"Слаг\", unique=True, blank=False)\n    class Meta:",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1178,7 +1222,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class Recipe(models.Model):\n    \"\"\"\n    Модель для представления рецепта.\n    \"\"\"\n    author = models.ForeignKey(\n        User,\n        on_delete=models.CASCADE,\n        verbose_name=\"Автор рецепта\",\n        blank=False,\n    )",
+        "peekOfCode": "class Recipe(models.Model):\n    \"\"\"\n    Модель для представления рецепта.\n    \"\"\"\n    author = models.ForeignKey(\n        User,\n        on_delete=models.CASCADE,\n        verbose_name=\"Автор рецепта\",\n        related_name=\"recipes\",\n        blank=False,",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1187,7 +1231,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class RecipeIngredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента в рецепте.\n    \"\"\"\n    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)\n    ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)\n    amount = models.IntegerField(\n        \"Количество\",\n        validators=(\n            MinValueValidator(",
+        "peekOfCode": "class RecipeIngredient(models.Model):\n    \"\"\"\n    Модель для представления ингредиента в рецепте.\n    \"\"\"\n    recipe = models.ForeignKey(\n        Recipe,\n        on_delete=models.CASCADE,\n        related_name=\"ingredient\",\n    )\n    ingredient = models.ForeignKey(",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1196,7 +1240,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.models",
         "description": "backend.foodgram.food.models",
-        "peekOfCode": "class FavoriteRecipe(models.Model):\n    \"\"\"\n    Модель для представления избранного рецепта.\n    \"\"\"\n    recipe = models.ForeignKey(\n        Recipe,\n        on_delete=models.CASCADE,\n        verbose_name=\"Рецепт\",\n    )\n    user = models.ForeignKey(",
+        "peekOfCode": "class FavoriteRecipe(models.Model):\n    \"\"\"\n    Модель для представления избранного рецепта.\n    \"\"\"\n    recipe = models.ForeignKey(\n        Recipe,\n        on_delete=models.CASCADE,\n        verbose_name=\"Рецепт\",\n        related_name=\"favorites\",\n    )",
         "detail": "backend.foodgram.food.models",
         "documentation": {}
     },
@@ -1228,146 +1272,11 @@
         "documentation": {}
     },
     {
-        "label": "RelationHandler",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.relation_hendler_for_views",
-        "description": "backend.foodgram.food.relation_hendler_for_views",
-        "peekOfCode": "class RelationHandler:\n    add_serializer: ModelSerializer\n    link_model: Model\n    def _create_relation(self, obj_id):\n        obj = get_object_or_404(self.queryset, pk=obj_id)\n        try:\n            self.link_model(None, obj.pk, self.request.user.pk).save()\n        except IntegrityError:\n            return Response(\n                {\"error\": \"Рецепт уже был добавлен.\"},",
-        "detail": "backend.foodgram.food.relation_hendler_for_views",
-        "documentation": {}
-    },
-    {
-        "label": "create_shoping_cart",
-        "kind": 2,
-        "importPath": "backend.foodgram.food.relation_hendler_for_views",
-        "description": "backend.foodgram.food.relation_hendler_for_views",
-        "peekOfCode": "def create_shoping_cart(user):\n    shopping_cart = []\n    shopping_carts = ShoppingCart.objects.filter(user=user)\n    if not shopping_carts.exists():\n        return shopping_cart\n    ingredients = (\n        Ingredient.objects.filter(\n            recipeingredient__recipe__shopping_recipe__in=shopping_carts\n        )\n        .values(\"name\", measurement=F(\"measurement_unit\"))",
-        "detail": "backend.foodgram.food.relation_hendler_for_views",
-        "documentation": {}
-    },
-    {
-        "label": "IngredientSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class IngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Ingredient.\"\"\"\n    class Meta:\n        model = Ingredient\n        fields = [\"id\", \"name\", \"measurement_unit\"]\nclass RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(source=\"ingredient.measurement_unit\")",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeIngredientSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeIngredientSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели RecipeIngredient.\"\"\"\n    id = serializers.ReadOnlyField(source=\"ingredient.id\")\n    name = serializers.ReadOnlyField(source=\"ingredient.name\")\n    measurement_unit = serializers.ReadOnlyField(source=\"ingredient.measurement_unit\")\n    class Meta:\n        model = RecipeIngredient\n        fields = (\n            \"id\",\n            \"name\",",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeIngredientInputSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeIngredientInputSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для входных данных модели RecipeIngredient.\"\"\"\n    id = serializers.IntegerField()\n    amount = serializers.IntegerField()\n    class Meta:\n        model = RecipeIngredient\n        fields = [\"id\", \"amount\"]\nclass TagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Tags.\"\"\"\n    color = Hex2NameColor()",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "TagsSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class TagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Tags.\"\"\"\n    color = Hex2NameColor()\n    class Meta:\n        model = Tags\n        fields = [\"id\", \"name\", \"color\", \"slug\"]\nclass RecipeTagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для связи модели Recipe с моделью Tags.\"\"\"\n    class Meta:\n        model = Tags",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeTagsSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeTagsSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для связи модели Recipe с моделью Tags.\"\"\"\n    class Meta:\n        model = Tags\n        fields = [\"id\"]\n    def to_internal_value(self, data):\n        \"\"\"Преобразует внешнее значение во внутреннее представление.\"\"\"\n        if isinstance(data, list):\n            return [int(item) for item in data]\n        return super().to_internal_value(data)",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "AuthorSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class AuthorSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели User, представляющий автора рецепта.\"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    class Meta:\n        model = User\n        fields = [\n            \"id\",\n            \"username\",\n            \"first_name\",\n            \"last_name\",",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeListSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeListSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для списка рецептов.\"\"\"\n    author = CustomUserSerializer(read_only=True)\n    tags = TagsSerializer(many=True)\n    ingredients = serializers.SerializerMethodField()\n    is_favorite = serializers.SerializerMethodField()\n    is_in_shopping_cart = serializers.SerializerMethodField()\n    def get_ingredients(self, obj):\n        \"\"\"Получает значение, указывающее, добавлен ли ингредиент\n        в избранное у пользователя.\"\"\"",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    COOKING_TIME_VALIDATION_ERROR = \"Время приготовления должно быть 1 или более.\"\n    TAGS_VALIDATION_ERROR = \"Нужно добавить хотя бы один тег.\"\n    INGREDIENTS_VALIDATION_ERROR = \"Нужно добавить хотя бы один ингредиент.\"\n    DUPLICATE_INGREDIENTS_VALIDATION_ERROR = \"Ингредиенты не могут повторяться\"\n    INGREDIENT_ID_ERROR = \"Неверный идентификатор ингредиента.\"\n    author = AuthorSerializer(read_only=True)\n    tags = serializers.PrimaryKeyRelatedField(queryset=Tags.objects.all(), many=True)\n    ingredients = RecipeIngredientInputSerializer(many=True)",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "ShortRecipeSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class ShortRecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для краткого представления рецепта.\"\"\"\n    image = Base64ImageField()\n    class Meta:\n        model = Recipe\n        fields = (\"id\", \"name\", \"image\", \"cooking_time\")\nclass ShoppingCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ShoppingCart\n        fields = (\"recipe\",)",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "ShoppingCartSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.serializers",
-        "description": "backend.foodgram.food.serializers",
-        "peekOfCode": "class ShoppingCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ShoppingCart\n        fields = (\"recipe\",)",
-        "detail": "backend.foodgram.food.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "backend.foodgram.food.urls",
-        "description": "backend.foodgram.food.urls",
-        "peekOfCode": "app_name = \"food\"\nrouter = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nurlpatterns = [\n    path(\"\", include(router.urls)),\n]",
-        "detail": "backend.foodgram.food.urls",
-        "documentation": {}
-    },
-    {
-        "label": "router",
-        "kind": 5,
-        "importPath": "backend.foodgram.food.urls",
-        "description": "backend.foodgram.food.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nurlpatterns = [\n    path(\"\", include(router.urls)),\n]",
-        "detail": "backend.foodgram.food.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "backend.foodgram.food.urls",
-        "description": "backend.foodgram.food.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", include(router.urls)),\n]",
-        "detail": "backend.foodgram.food.urls",
-        "documentation": {}
-    },
-    {
         "label": "RecipeViewSet",
         "kind": 6,
         "importPath": "backend.foodgram.food.views",
         "description": "backend.foodgram.food.views",
-        "peekOfCode": "class RecipeViewSet(ModelViewSet, RelationHandler):\n    \"\"\"\n    ViewSet для модели Recipe.\n    Поддерживает операции CRUD (create, retrieve, update, delete) и список рецептов.\n    \"\"\"\n    queryset = Recipe.objects.select_related(\"author\")\n    filter_backends = (DjangoFilterBackend,)\n    filterset_class = RecipeFilter\n    permission_class = (AuthorOrStaffOrReadOnly,)\n    add_serializer = ShortRecipeSerializer",
+        "peekOfCode": "class RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):\n    \"\"\"\n    ViewSet для модели Recipe.\n    Поддерживает операции CRUD:\n    (create, retrieve, update, delete) и список рецептов.\n    \"\"\"\n    queryset = Recipe.objects.select_related(\"author\").prefetch_related(\n        \"tags\", \"ingredients\"",
         "detail": "backend.foodgram.food.views",
         "documentation": {}
     },
@@ -1376,7 +1285,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.views",
         "description": "backend.foodgram.food.views",
-        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tags.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
+        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
         "detail": "backend.foodgram.food.views",
         "documentation": {}
     },
@@ -1385,7 +1294,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.views",
         "description": "backend.foodgram.food.views",
-        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    queryset = Ingredient.objects.all()\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)\n    filterset_class = IngredientFilter",
+        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения\n    списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    queryset = Ingredient.objects.all()\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)",
         "detail": "backend.foodgram.food.views",
         "documentation": {}
     },
@@ -1403,7 +1312,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1412,7 +1321,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nDEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1421,7 +1330,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
+        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\").lower() == \"true\"\nALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1430,7 +1339,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\nif os.getenv(\"ALLOWED_HOSTS\"):\n    ALLOWED_HOSTS = [\n        host.strip() for host in os.getenv(\"ALLOWED_HOSTS\").split(\",\")\n    ]\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1502,7 +1411,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "DJOSER = {\n    \"LOGIN_FIELD\": \"email\",\n    \"USER_ID_FIELD\": \"id\",\n    \"SERIALIZERS\": {\n        \"user_create\": \"users.serializers.CustomUserCreateSerializer\",\n        \"user\": \"users.serializers.CustomUserSerializer\",\n        \"current_user\": \"users.serializers.CustomUserSerializer\",\n    },\n    \"PERMISSIONS\": {\n        \"user\": [\"rest_framework.permissions.AllowAny\"],",
+        "peekOfCode": "DJOSER = {\n    \"LOGIN_FIELD\": \"email\",\n    \"USER_ID_FIELD\": \"id\",\n    \"SERIALIZERS\": {\n        \"user_create\": \"api.serializers.CustomUserCreateSerializer\",\n        \"user\": \"api.serializers.CustomUserSerializer\",\n        \"current_user\": \"api.serializers.CustomUserSerializer\",\n    },\n    \"PERMISSIONS\": {\n        \"user\": [\"rest_framework.permissions.AllowAny\"],",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1511,7 +1420,16 @@
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.settings",
         "description": "backend.foodgram.foodgram.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"foodgram.wsgi.application\"\nif DEBUG:\n    DATABASES = {\n        \"default\": {\n            \"ENGINE\": \"django.db.backends.sqlite3\",\n            \"NAME\": os.path.join(BASE_DIR, \"db.sqlite3\"),\n        }\n    }\nelse:\n    DATABASES = {",
+        "peekOfCode": "WSGI_APPLICATION = \"foodgram.wsgi.application\"\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": os.getenv(\"DB_ENGINE\"),\n        \"NAME\": os.getenv(\"POSTGRES_DB\"),\n        \"USER\": os.getenv(\"POSTGRES_USER\"),\n        \"PASSWORD\": os.getenv(\"POSTGRES_PASSWORD\"),\n        \"HOST\": os.getenv(\"DB_HOST\", \"db\"),\n        \"PORT\": os.getenv(\"POSTGRES_PORT\", 5432),\n    }",
+        "detail": "backend.foodgram.foodgram.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.foodgram.foodgram.settings",
+        "description": "backend.foodgram.foodgram.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": os.getenv(\"DB_ENGINE\"),\n        \"NAME\": os.getenv(\"POSTGRES_DB\"),\n        \"USER\": os.getenv(\"POSTGRES_USER\"),\n        \"PASSWORD\": os.getenv(\"POSTGRES_PASSWORD\"),\n        \"HOST\": os.getenv(\"DB_HOST\", \"db\"),\n        \"PORT\": os.getenv(\"POSTGRES_PORT\", 5432),\n    }\n}",
         "detail": "backend.foodgram.foodgram.settings",
         "documentation": {}
     },
@@ -1624,20 +1542,11 @@
         "documentation": {}
     },
     {
-        "label": "api_patterns",
-        "kind": 5,
-        "importPath": "backend.foodgram.foodgram.urls",
-        "description": "backend.foodgram.foodgram.urls",
-        "peekOfCode": "api_patterns = [\n    path(\"\", include(\"users.urls\", namespace=\"api_users\")),\n    path(\"\", include(\"food.urls\", namespace=\"api_food\")),\n]\nurlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
-        "detail": "backend.foodgram.foodgram.urls",
-        "documentation": {}
-    },
-    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "backend.foodgram.foodgram.urls",
         "description": "backend.foodgram.foodgram.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(api_patterns)),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = (\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(\"api.urls\", namespace=\"api\")),\n)",
         "detail": "backend.foodgram.foodgram.urls",
         "documentation": {}
     },
@@ -1648,69 +1557,6 @@
         "description": "backend.foodgram.foodgram.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "backend.foodgram.foodgram.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0001_initial",
-        "description": "backend.foodgram.users.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"auth\", \"0012_alter_user_first_name_max_length\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (",
-        "detail": "backend.foodgram.users.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0002_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0002_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0002_alter_user_role",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0003_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0003_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0002_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0003_alter_user_role",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0004_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0004_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0003_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0004_alter_user_role",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0005_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0005_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0004_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0005_alter_user_role",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0006_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0006_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0005_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0006_alter_user_role",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.migrations.0007_alter_user_role",
-        "description": "backend.foodgram.users.migrations.0007_alter_user_role",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0006_alter_user_role\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"role\",\n            field=models.CharField(\n                choices=[",
-        "detail": "backend.foodgram.users.migrations.0007_alter_user_role",
         "documentation": {}
     },
     {
@@ -1727,7 +1573,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.admin",
         "description": "backend.foodgram.users.admin",
-        "peekOfCode": "class FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.\n    \"\"\"\n    list_display = (\"pk\", \"user\", \"author\")\n    list_filter = (\"user\", \"author\")\n    search_fields = (\"author\",)",
+        "peekOfCode": "class FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.\n    \"\"\"\n    list_display = (\"pk\", \"user\", \"author\")\n    list_filter = (\"user\", \"author\")\n    search_fields = (\"author\",)\n    def get_queryset(self, request):\n        queryset = super().get_queryset(request)\n        return queryset.select_related(\"user\", \"author\")",
         "detail": "backend.foodgram.users.admin",
         "documentation": {}
     },
@@ -1741,11 +1587,20 @@
         "documentation": {}
     },
     {
+        "label": "UserRole",
+        "kind": 6,
+        "importPath": "backend.foodgram.users.models",
+        "description": "backend.foodgram.users.models",
+        "peekOfCode": "class UserRole(models.TextChoices):\n    \"\"\"\n    Класс для выбора роли пользователя.\n    \"\"\"\n    USER = \"user\", \"Пользователь\"\n    MODERATOR = \"moderator\", \"Модератор\"\n    ADMIN = \"admin\", \"Администратор\"\nclass User(AbstractUser):\n    \"\"\"\n    Расширенная модель пользователя.",
+        "detail": "backend.foodgram.users.models",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "backend.foodgram.users.models",
         "description": "backend.foodgram.users.models",
-        "peekOfCode": "class User(AbstractUser):\n    \"\"\"\n    Расширенная модель пользователя.\n    \"\"\"\n    USER = \"user\"\n    MODERATOR = \"moderator\"\n    ADMIN = \"admin\"\n    ROLES = (\n        (USER, \"Пользователь\"),\n        (MODERATOR, \"Модератор\"),",
+        "peekOfCode": "class User(AbstractUser):\n    \"\"\"\n    Расширенная модель пользователя.\n    \"\"\"\n    email = models.EmailField(\n        verbose_name=\"Адрес email\",\n        max_length=254,\n        unique=True,\n        blank=False,\n        error_messages={",
         "detail": "backend.foodgram.users.models",
         "documentation": {}
     },
@@ -1759,93 +1614,12 @@
         "documentation": {}
     },
     {
-        "label": "CurrentUserDefaultId",
+        "label": "FollowAuthorView",
         "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class CurrentUserDefaultId(object):\n    \"\"\"\n    Класс-фабрика для определения идентификатора текущего пользователя.\n    \"\"\"\n    requires_context = True\n    def __call__(self, serializer_instance=None):\n        if serializer_instance is not None:\n            self.user_id = serializer_instance.context[\"request\"].user.id\n            return self.user_id\nclass CustomUserCreateSerializer(UserCreateSerializer):",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CustomUserCreateSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class CustomUserCreateSerializer(UserCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания пользователя.\n    \"\"\"\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"id\",\n            \"username\",",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    class Meta:\n        model = Recipe\n        fields = \"__all__\"\nclass CustomUserSerializer(UserSerializer):\n    \"\"\"\n    Пользовательский сериализатор для модели User.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CustomUserSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class CustomUserSerializer(UserSerializer):\n    \"\"\"\n    Пользовательский сериализатор для модели User.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(read_only=True)\n    email = serializers.EmailField(required=False, allow_null=True, allow_blank=True)\n    class Meta:\n        model = User\n        fields = (\n            \"id\",",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "FollowRecipeSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class FollowRecipeSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для краткой информации о рецепте в подписках.\n    \"\"\"\n    class Meta:\n        model = Recipe\n        fields = (\"id\", \"name\", \"image\", \"cooking_time\")\nclass SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "SubscriptionSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(method_name=\"get_is_subscribed\")\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    recipes_count = serializers.SerializerMethodField(method_name=\"get_recipes_count\")\n    class Meta:\n        model = User\n        fields = [",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.serializers",
-        "description": "backend.foodgram.users.serializers",
-        "peekOfCode": "User = get_user_model()\nclass CurrentUserDefaultId(object):\n    \"\"\"\n    Класс-фабрика для определения идентификатора текущего пользователя.\n    \"\"\"\n    requires_context = True\n    def __call__(self, serializer_instance=None):\n        if serializer_instance is not None:\n            self.user_id = serializer_instance.context[\"request\"].user.id\n            return self.user_id",
-        "detail": "backend.foodgram.users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.urls",
-        "description": "backend.foodgram.users.urls",
-        "peekOfCode": "app_name = \"users\"\napi_router_v1 = DefaultRouter()\napi_router_v1.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)\nurlpatterns = [\n    path(r\"\", include(api_router_v1.urls)),\n    path(r\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),",
-        "detail": "backend.foodgram.users.urls",
-        "documentation": {}
-    },
-    {
-        "label": "api_router_v1",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.urls",
-        "description": "backend.foodgram.users.urls",
-        "peekOfCode": "api_router_v1 = DefaultRouter()\napi_router_v1.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)\nurlpatterns = [\n    path(r\"\", include(api_router_v1.urls)),\n    path(r\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),\n    path(r\"users/<int:pk>/subscribe/\", follow_author, name=\"follow-author\"),",
-        "detail": "backend.foodgram.users.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.urls",
-        "description": "backend.foodgram.users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(r\"\", include(api_router_v1.urls)),\n    path(r\"auth/token/login/\", TokenCreateView.as_view(), name=\"token_create\"),\n    path(r\"users/<int:pk>/subscribe/\", follow_author, name=\"follow-author\"),\n    path(r\"auth/token/logout/\", CustomTokenDestroyView.as_view(), name=\"logout\"),\n    path(r\"\", include(\"djoser.urls\")),\n]",
-        "detail": "backend.foodgram.users.urls",
+        "importPath": "backend.foodgram.users.views",
+        "description": "backend.foodgram.users.views",
+        "peekOfCode": "class FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)\n        if user.id == author.id:",
+        "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
     {
@@ -1853,7 +1627,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.all()\n    serializer_class = SubscriptionSerializer\n    filter_backends = (filters.SearchFilter,)\n    permission_classes = (IsAuthenticated,)\n    search_fields = (\"^following__user\",)\n    def get_queryset(self):",
+        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.all()\n    serializer_class = SubscriptionSerializer\n    filter_backends = (filters.SearchFilter,)\n    permission_class = (IsAuthenticated,)\n    search_fields = (\"^following__user\",)\n    def get_queryset(self):",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1867,20 +1641,11 @@
         "documentation": {}
     },
     {
-        "label": "follow_author",
-        "kind": 2,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "def follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)\n    author = get_object_or_404(User, pk=pk)\n    if request.method == \"POST\":\n        if user.id == author.id:\n            return Response(\n                {\"errors\": ERROR_SUBSCRIBE_SELF},",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
         "label": "ERROR_SUBSCRIBE_SELF",
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)",
+        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1889,7 +1654,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)\n    author = get_object_or_404(User, pk=pk)",
+        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
@@ -1898,7 +1663,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.users.views",
         "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\n@api_view([\"POST\", \"DELETE\"])\n@permission_classes([IsAuthenticated])\ndef follow_author(request, pk):\n    \"\"\"\n    Подписка на автора.\n    \"\"\"\n    user = get_object_or_404(User, username=request.user.username)\n    author = get_object_or_404(User, pk=pk)\n    if request.method == \"POST\":",
+        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)",
         "detail": "backend.foodgram.users.views",
         "documentation": {}
     },

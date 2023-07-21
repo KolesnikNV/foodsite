@@ -42,7 +42,6 @@ class RecipeFilter(filters.FilterSet):
         fields = (
             "tags",
             "author",
-            "recipeingredient",
             "is_favorited",
             "is_in_shopping_cart",
         )
@@ -57,8 +56,7 @@ class RecipeFilter(filters.FilterSet):
 
         if value:
             return queryset.filter(favoriterecipe__user=user)
-        else:
-            return queryset.exclude(favoriterecipe__user=user)
+        return queryset.exclude(favoriterecipe__user=user)
 
     def get_is_in_shopping_cart(self, queryset, name, value):
         """

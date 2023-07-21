@@ -1,16 +1,11 @@
 from django.contrib import admin
+from django.db.models import Count
 
-from .models import (
-    FavoriteRecipe,
-    Ingredient,
-    Recipe,
-    RecipeIngredient,
-    ShoppingCart,
-    Tags,
-)
+from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
+                     ShoppingCart, Tag)
 
 
-@admin.register(Tags)
+@admin.register(Tag)
 class TagsAdmin(admin.ModelAdmin):
     """
     Административный класс для модели Tags.
@@ -40,6 +35,13 @@ class IngredientAdmin(admin.ModelAdmin):
     )
     search_fields = ("name",)
     ordering = ("measurement_unit",)
+
+    def get_queryset(self, request):
+        return (
+            super()
+            .get_queryset(request)
+            .prefetch_related("recipeingredient_set")
+        )
 
     def get_recipes_count(self, obj):
         """
@@ -89,6 +91,15 @@ class RecipeAdmin(admin.ModelAdmin):
     )
 
     inlines = (RecipeIngredientsInline,)
+
+    def get_queryset(self, request):
+        return (
+            super()
+            .get_queryset(request)
+            .select_related("author")
+            .prefetch_related("tags")
+            .annotate(favorites_count=Count("in_favorite"))
+        )
 
     def in_favorite(self, obj):
         """

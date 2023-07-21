@@ -3,19 +3,21 @@ from django.db import models
 from django.db.models import F, Q
 
 
+class UserRole(models.TextChoices):
+    """
+    Класс для выбора роли пользователя.
+    """
+
+    USER = "user", "Пользователь"
+    MODERATOR = "moderator", "Модератор"
+    ADMIN = "admin", "Администратор"
+
+
 class User(AbstractUser):
     """
     Расширенная модель пользователя.
     """
 
-    USER = "user"
-    MODERATOR = "moderator"
-    ADMIN = "admin"
-    ROLES = (
-        (USER, "Пользователь"),
-        (MODERATOR, "Модератор"),
-        (ADMIN, "Администратор"),
-    )
     email = models.EmailField(
         verbose_name="Адрес email",
         max_length=254,
@@ -50,8 +52,8 @@ class User(AbstractUser):
     role = models.CharField(
         verbose_name="Статус",
         max_length=20,
-        choices=ROLES,
-        default=ADMIN,
+        choices=UserRole.choices,
+        default=UserRole.USER,
     )
     date_joined = models.DateTimeField(
         verbose_name="Дата регистрации",

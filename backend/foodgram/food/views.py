@@ -9,11 +9,9 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
-from .filters import IngredientFilter, RecipeFilter
-from .models import Ingredient, Recipe, ShoppingCart, Tags
-from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
-from .relation_hendler_for_views import RelationHandler, create_shoping_cart
-from .serializers import (
+from api.mixin import MultiSerializerViewSetMixin
+from api.relation_handler_for_views import RelationHandler, create_shoping_cart
+from api.serializers import (
     FavoriteRecipe,
     IngredientSerializer,
     RecipeListSerializer,
@@ -22,32 +20,42 @@ from .serializers import (
     TagsSerializer,
 )
 
+from .filters import IngredientFilter, RecipeFilter
+from .models import Ingredient, Recipe, ShoppingCart, Tag
+from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
 
-class RecipeViewSet(ModelViewSet, RelationHandler):
+
+class RecipeViewSet(
+    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin
+):
     """
     ViewSet для модели Recipe.
-    Поддерживает операции CRUD
+    Поддерживает операции CRUD:
     (create, retrieve, update, delete) и список рецептов.
 
     """
 
-    queryset = Recipe.objects.select_related("author")
+    queryset = Recipe.objects.select_related("author").prefetch_related(
+        "tags", "ingredients"
+    )
     filter_backends = (DjangoFilterBackend,)
     filterset_class = RecipeFilter
     permission_class = (AuthorOrStaffOrReadOnly,)
     add_serializer = ShortRecipeSerializer
     pagination_class = PageNumberPagination
+    serializer_classes = {
+        "list": RecipeListSerializer,
+        "retrieve": RecipeSerializer,
+        "create": RecipeSerializer,
+        "update": RecipeSerializer,
+    }
 
     def get_serializer_class(self):
         """
         Возвращает класс сериализатора в зависимости от действия запроса.
 
         """
-        if self.action == "create" or self.action == "update":
-            return RecipeSerializer
-        elif self.action == "list" or self.action == "retrieve":
-            return RecipeListSerializer
-        return RecipeSerializer
+        return self.serializer_classes.get(self.action, RecipeSerializer)
 
     @action(detail=True, permission_classes=(IsAuthenticated,))
     def favorite(self, request, pk):
@@ -63,8 +71,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
         Добавляет рецепт в список избранных у текущего пользователя.
 
         """
-        self.link_model = FavoriteRecipe
-        return self._create_relation(pk)
+        return self._create_relation(FavoriteRecipe, pk)
 
     @favorite.mapping.delete
     def delete_recipe_from_favorites(self, request, pk):
@@ -72,8 +79,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
         Удаляет рецепт из списка избранных у текущего пользователя.
 
         """
-        self.link_model = FavoriteRecipe
-        return self._delete_relation(pk)
+        return self._delete_relation(FavoriteRecipe, pk)
 
     @action(detail=True, permission_classes=[IsAuthenticated])
     def shopping_cart(self, pk):
@@ -89,8 +95,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
         Добавляет рецепт в корзину покупок текущего пользователя.
 
         """
-        self.link_model = ShoppingCart
-        return self._create_relation(pk)
+        return self._create_relation(ShoppingCart, pk)
 
     @shopping_cart.mapping.delete
     def delete_recipe_from_cart(self, request, pk):
@@ -98,8 +103,7 @@ class RecipeViewSet(ModelViewSet, RelationHandler):
         Удаляет рецепт из корзины покупок текущего пользователя.
 
         """
-        self.link_model = ShoppingCart
-        return self._delete_relation(Q(recipe__id=pk))
+        return self._delete_relation(ShoppingCart, Q(recipe__id=pk))
 
     @action(
         methods=("get",), detail=False, permission_classes=(IsAuthenticated,)
@@ -130,7 +134,7 @@ class TagsViewSet(ReadOnlyModelViewSet):
 
     """
 
-    queryset = Tags.objects.all()
+    queryset = Tag.objects.all()
     serializer_class = TagsSerializer
     pagination_class = None
 

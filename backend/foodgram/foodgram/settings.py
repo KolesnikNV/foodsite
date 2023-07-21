@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "djoser",
     "django_filters",
+    "api.apps.ApiConfig",
     "food.apps.FoodConfig",
     "users.apps.UsersConfig",
 ]
@@ -83,9 +84,9 @@ DJOSER = {
     "LOGIN_FIELD": "email",
     "USER_ID_FIELD": "id",
     "SERIALIZERS": {
-        "user_create": "users.serializers.CustomUserCreateSerializer",
-        "user": "users.serializers.CustomUserSerializer",
-        "current_user": "users.serializers.CustomUserSerializer",
+        "user_create": "api.serializers.CustomUserCreateSerializer",
+        "user": "api.serializers.CustomUserSerializer",
+        "current_user": "api.serializers.CustomUserSerializer",
     },
     "PERMISSIONS": {
         "user": ["rest_framework.permissions.AllowAny"],
@@ -94,24 +95,17 @@ DJOSER = {
 
 WSGI_APPLICATION = "foodgram.wsgi.application"
 
-if DEBUG:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
+
+DATABASES = {
+    "default": {
+        "ENGINE": os.getenv("DB_ENGINE"),
+        "NAME": os.getenv("POSTGRES_DB"),
+        "USER": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
+        "HOST": os.getenv("DB_HOST", "db"),
+        "PORT": os.getenv("POSTGRES_PORT", 5432),
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": "postgres",
-            "USER": "postgres",
-            "PASSWORD": "postgres",
-            "HOST": "db",
-            "PORT": 5432,
-        }
-    }
+}
 
 
 AUTH_USER_MODEL = "users.User"

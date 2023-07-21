@@ -1,25 +1,21 @@
-from django.db.models import F, Model, Q, Sum
+from django.db.models import F, Q, Sum
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
-from rest_framework.status import (
-    HTTP_201_CREATED,
-    HTTP_204_NO_CONTENT,
-    HTTP_400_BAD_REQUEST,
-)
+from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
+                                   HTTP_400_BAD_REQUEST)
 
-from .models import Ingredient, ShoppingCart
+from food.models import Ingredient, ShoppingCart
 
 
 class RelationHandler:
     add_serializer: ModelSerializer
-    link_model: Model
 
-    def _create_relation(self, obj_id):
+    def _create_relation(self, model_class, obj_id):
         obj = get_object_or_404(self.queryset, pk=obj_id)
         try:
-            self.link_model(None, obj.pk, self.request.user.pk).save()
+            model_class(None, obj.pk, self.request.user.pk).save()
         except IntegrityError:
             return Response(
                 {"error": "Рецепт уже был добавлен."},
@@ -29,15 +25,15 @@ class RelationHandler:
         serializer = self.add_serializer(obj)
         return Response(serializer.data, status=HTTP_201_CREATED)
 
-    def _delete_relation(self, q):
+    def _delete_relation(self, model_class, q):
         deleted, _ = (
-            self.link_model.objects.filter(q & Q(user=self.request.user))
+            model_class.objects.filter(q & Q(user=self.request.user))
             .first()
             .delete()
         )
         if not deleted:
             return Response(
-                {"error": f"{self.link_model.__name__} не существует"},
+                {"error": f"{model_class.__name__} не существует"},
                 status=HTTP_400_BAD_REQUEST,
             )
 
