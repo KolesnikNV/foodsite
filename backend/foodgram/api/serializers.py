@@ -47,24 +47,6 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         )
 
 
-class RecipeSerializer(serializers.ModelSerializer):
-    """Сериализатор для модели Recipe."""
-
-    class Meta:
-        model = Recipe
-        fields = [
-            "id",
-            "author",
-            "name",
-            "image",
-            "text",
-            "ingredients",
-            "tags",
-            "cooking_time",
-            "pub_date",
-        ]
-
-
 class CustomUserSerializer(UserSerializer):
     """
     Пользовательский сериализатор для модели User.

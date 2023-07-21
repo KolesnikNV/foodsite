@@ -889,7 +889,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.mixin",
         "description": "backend.foodgram.api.mixin",
-        "peekOfCode": "class MultiSerializerViewSetMixin:\n    \"\"\"Mixin for selecting an appropriate serializer from `serializer_classes`.\"\"\"\n    serializer_classes: Optional[dict[str, Type[Serializer]]] = None\n    def get_serializer_class(self):\n        try:\n            return self.serializer_classes[self.action]\n        except KeyError:\n            return super().get_serializer_class()",
+        "peekOfCode": "class MultiSerializerViewSetMixin:\n    serializer_classes: Optional[dict[str, Type[Serializer]]] = None\n    def get_serializer_class(self):\n        try:\n            return self.serializer_classes[self.action]\n        except KeyError:\n            return super().get_serializer_class()",
         "detail": "backend.foodgram.api.mixin",
         "documentation": {}
     },
@@ -926,15 +926,6 @@
         "importPath": "backend.foodgram.api.serializers",
         "description": "backend.foodgram.api.serializers",
         "peekOfCode": "class CustomUserCreateSerializer(UserCreateSerializer):\n    \"\"\"\n    Пользовательский сериализатор для создания пользователя.\n    \"\"\"\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"id\",\n            \"username\",",
-        "detail": "backend.foodgram.api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeSerializer",
-        "kind": 6,
-        "importPath": "backend.foodgram.api.serializers",
-        "description": "backend.foodgram.api.serializers",
-        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    \"\"\"Сериализатор для модели Recipe.\"\"\"\n    class Meta:\n        model = Recipe\n        fields = [\n            \"id\",\n            \"author\",\n            \"name\",\n            \"image\",\n            \"text\",",
         "detail": "backend.foodgram.api.serializers",
         "documentation": {}
     },
