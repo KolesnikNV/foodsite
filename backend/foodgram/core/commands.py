@@ -1,6 +1,10 @@
+import logging
+
 from django.core.management.base import BaseCommand
 import pandas as pd
 from food.models import Ingredient, Tag
+
+logger = logging.getLogger(__name__)
 
 
 class Command(BaseCommand):
@@ -29,7 +33,9 @@ class Command(BaseCommand):
                 objects = [model(**row) for _, row in df.iterrows()]
                 model.objects.bulk_create(objects)
             except Exception as e:
-                print(f"Ошибка при добавлении данных: {e}")
+                logger.error(
+                    f"Ошибка при добавлении данных из файла {path}: {e}"
+                )
 
 
 if __name__ == "__main__":

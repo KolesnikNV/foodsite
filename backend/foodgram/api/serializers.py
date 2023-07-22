@@ -1,10 +1,7 @@
-from django.core.exceptions import ObjectDoesNotExist
 from django.core.validators import MinValueValidator
 from django.db import transaction
 from djoser.serializers import UserCreateSerializer, UserSerializer
 from drf_base64.fields import Base64ImageField
-from rest_framework import exceptions, serializers
-
 from food.custom_fields import Hex2NameColor
 from food.models import (
     FavoriteRecipe,
@@ -14,6 +11,7 @@ from food.models import (
     ShoppingCart,
     Tag,
 )
+from rest_framework import exceptions, serializers
 from users.models import Follow, User
 
 
@@ -101,6 +99,9 @@ class SubscriptionSerializer(serializers.ModelSerializer):
         method_name="get_is_subscribed"
     )
     recipes = serializers.SerializerMethodField(method_name="get_recipes")
+    recipes_count = serializers.SerializerMethodField(
+        method_name="get_recipes_count"
+    )
 
     class Meta:
         model = User
@@ -112,6 +113,7 @@ class SubscriptionSerializer(serializers.ModelSerializer):
             "last_name",
             "is_subscribed",
             "recipes",
+            "recipes_count",
         ]
 
     def get_is_subscribed(self, obj):
@@ -318,11 +320,9 @@ class RecipeSerializer(serializers.ModelSerializer):
 
         ingredient_ids = [ingredient["id"] for ingredient in ingredients]
 
-        try:
-            ingredients_queryset = Ingredient.objects.filter(
-                pk__in=ingredient_ids
-            )
-        except ObjectDoesNotExist:
+        ingredients_queryset = Ingredient.objects.filter(pk__in=ingredient_ids)
+
+        if not ingredients_queryset.exists():
             raise exceptions.ValidationError(self.INGREDIENT_ID_ERROR)
 
         ingredient_data = []

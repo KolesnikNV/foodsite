@@ -79,11 +79,7 @@ class RecipeAdmin(admin.ModelAdmin):
     Административный класс для модели Recipe.
     """
 
-    list_display = (
-        "id",
-        "name",
-        "author",
-    )
+    list_display = ("id", "name", "author", "in_favorite")
     list_filter = (
         "name",
         "author",
@@ -105,7 +101,7 @@ class RecipeAdmin(admin.ModelAdmin):
         """
         Возвращает количество раз, когда рецепт был добавлен в избранное.
         """
-        return obj.in_favorite.all().count()
+        return obj.favorites_count
 
     in_favorite.short_description = "Количество добавлений в избранное"
 
@@ -122,6 +118,9 @@ class FavoriteRecipeAdmin(admin.ModelAdmin):
         "recipe",
     )
 
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related("user", "recipe")
+
 
 @admin.register(ShoppingCart)
 class ShoppingListAdmin(admin.ModelAdmin):
@@ -134,3 +133,6 @@ class ShoppingListAdmin(admin.ModelAdmin):
         "user",
         "recipe",
     )
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related("user", "recipe")

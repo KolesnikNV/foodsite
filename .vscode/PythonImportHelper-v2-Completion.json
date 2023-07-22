@@ -56,6 +56,30 @@
         "documentation": {}
     },
     {
+        "label": "SAFE_METHODS",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "BasePermission",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "F",
         "importPath": "django.db.models",
         "description": "django.db.models",
@@ -88,7 +112,23 @@
         "documentation": {}
     },
     {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
         "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,
@@ -133,70 +173,6 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "ModelSerializer",
-        "importPath": "rest_framework.serializers",
-        "description": "rest_framework.serializers",
-        "isExtraImport": true,
-        "detail": "rest_framework.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "HTTP_201_CREATED",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
-        "isExtraImport": true,
-        "detail": "rest_framework.status",
-        "documentation": {}
-    },
-    {
-        "label": "HTTP_204_NO_CONTENT",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
-        "isExtraImport": true,
-        "detail": "rest_framework.status",
-        "documentation": {}
-    },
-    {
-        "label": "HTTP_400_BAD_REQUEST",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
-        "isExtraImport": true,
-        "detail": "rest_framework.status",
-        "documentation": {}
-    },
-    {
-        "label": "HTTP_400_BAD_REQUEST",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
-        "isExtraImport": true,
-        "detail": "rest_framework.status",
         "documentation": {}
     },
     {
@@ -272,6 +248,22 @@
         "documentation": {}
     },
     {
+        "label": "Recipe",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "ShoppingCart",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
         "label": "Tag",
         "importPath": "food.models",
         "description": "food.models",
@@ -280,11 +272,75 @@
         "documentation": {}
     },
     {
-        "label": "ObjectDoesNotExist",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
+        "label": "Ingredient",
+        "importPath": "food.models",
+        "description": "food.models",
         "isExtraImport": true,
-        "detail": "django.core.exceptions",
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "importPath": "food.models",
+        "description": "food.models",
+        "isExtraImport": true,
+        "detail": "food.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "ModelSerializer",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_201_CREATED",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_204_NO_CONTENT",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_400_BAD_REQUEST",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_400_BAD_REQUEST",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
         "documentation": {}
     },
     {
@@ -312,31 +368,31 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "IntegrityError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -368,6 +424,14 @@
         "documentation": {}
     },
     {
+        "label": "Hex2NameColor",
+        "importPath": "food.custom_fields",
+        "description": "food.custom_fields",
+        "isExtraImport": true,
+        "detail": "food.custom_fields",
+        "documentation": {}
+    },
+    {
         "label": "exceptions",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -377,22 +441,6 @@
     },
     {
         "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "filters",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -416,11 +464,27 @@
         "documentation": {}
     },
     {
-        "label": "Hex2NameColor",
-        "importPath": "food.custom_fields",
-        "description": "food.custom_fields",
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "food.custom_fields",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "Follow",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
         "documentation": {}
     },
     {
@@ -445,6 +509,54 @@
         "description": "users.models",
         "isExtraImport": true,
         "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenDestroyView",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "FollowAuthorView",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "IngredientViewSet",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeViewSet",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionListView",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "TagsViewSet",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
         "documentation": {}
     },
     {
@@ -504,51 +616,172 @@
         "documentation": {}
     },
     {
-        "label": "IngredientViewSet",
-        "importPath": "food.views",
-        "description": "food.views",
+        "label": "MultiSerializerViewSetMixin",
+        "importPath": "api.mixin",
+        "description": "api.mixin",
         "isExtraImport": true,
-        "detail": "food.views",
+        "detail": "api.mixin",
         "documentation": {}
     },
     {
-        "label": "RecipeViewSet",
-        "importPath": "food.views",
-        "description": "food.views",
+        "label": "RelationHandler",
+        "importPath": "api.relation_handler_for_views",
+        "description": "api.relation_handler_for_views",
         "isExtraImport": true,
-        "detail": "food.views",
+        "detail": "api.relation_handler_for_views",
         "documentation": {}
     },
     {
-        "label": "TagsViewSet",
-        "importPath": "food.views",
-        "description": "food.views",
+        "label": "create_shoping_cart",
+        "importPath": "api.relation_handler_for_views",
+        "description": "api.relation_handler_for_views",
         "isExtraImport": true,
-        "detail": "food.views",
+        "detail": "api.relation_handler_for_views",
         "documentation": {}
     },
     {
-        "label": "CustomTokenDestroyView",
-        "importPath": "users.views",
-        "description": "users.views",
+        "label": "FavoriteRecipe",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
         "isExtraImport": true,
-        "detail": "users.views",
+        "detail": "api.serializers",
         "documentation": {}
     },
     {
-        "label": "SubscriptionListView",
-        "importPath": "users.views",
-        "description": "users.views",
+        "label": "IngredientSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
         "isExtraImport": true,
-        "detail": "users.views",
+        "detail": "api.serializers",
         "documentation": {}
     },
     {
-        "label": "FollowAuthorView",
-        "importPath": "users.views",
-        "description": "users.views",
+        "label": "RecipeListSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
         "isExtraImport": true,
-        "detail": "users.views",
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ShortRecipeSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TagsSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoFilterBackend",
+        "importPath": "django_filters.rest_framework",
+        "description": "django_filters.rest_framework",
+        "isExtraImport": true,
+        "detail": "django_filters.rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "importPath": "djoser",
+        "description": "djoser",
+        "isExtraImport": true,
+        "detail": "djoser",
+        "documentation": {}
+    },
+    {
+        "label": "IngredientFilter",
+        "importPath": "food.filters",
+        "description": "food.filters",
+        "isExtraImport": true,
+        "detail": "food.filters",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeFilter",
+        "importPath": "food.filters",
+        "description": "food.filters",
+        "isExtraImport": true,
+        "detail": "food.filters",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "ReadOnlyModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "ViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
         "documentation": {}
     },
     {
@@ -626,190 +859,6 @@
         "documentation": {}
     },
     {
-        "label": "SAFE_METHODS",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "BasePermission",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "DjangoFilterBackend",
-        "importPath": "django_filters.rest_framework",
-        "description": "django_filters.rest_framework",
-        "isExtraImport": true,
-        "detail": "django_filters.rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "action",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "action",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
-        "documentation": {}
-    },
-    {
-        "label": "ModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "ReadOnlyModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "ReadOnlyModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "ViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "MultiSerializerViewSetMixin",
-        "importPath": "api.mixin",
-        "description": "api.mixin",
-        "isExtraImport": true,
-        "detail": "api.mixin",
-        "documentation": {}
-    },
-    {
-        "label": "RelationHandler",
-        "importPath": "api.relation_handler_for_views",
-        "description": "api.relation_handler_for_views",
-        "isExtraImport": true,
-        "detail": "api.relation_handler_for_views",
-        "documentation": {}
-    },
-    {
-        "label": "create_shoping_cart",
-        "importPath": "api.relation_handler_for_views",
-        "description": "api.relation_handler_for_views",
-        "isExtraImport": true,
-        "detail": "api.relation_handler_for_views",
-        "documentation": {}
-    },
-    {
-        "label": "FavoriteRecipe",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "IngredientSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeListSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "ShortRecipeSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "TagsSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "SubscriptionSerializer",
-        "importPath": "api.serializers",
-        "description": "api.serializers",
-        "isExtraImport": true,
-        "detail": "api.serializers",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -859,14 +908,6 @@
         "documentation": {}
     },
     {
-        "label": "utils",
-        "importPath": "djoser",
-        "description": "djoser",
-        "isExtraImport": true,
-        "detail": "djoser",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -891,6 +932,24 @@
         "description": "backend.foodgram.api.mixin",
         "peekOfCode": "class MultiSerializerViewSetMixin:\n    serializer_classes: Optional[dict[str, Type[Serializer]]] = None\n    def get_serializer_class(self):\n        try:\n            return self.serializer_classes[self.action]\n        except KeyError:\n            return super().get_serializer_class()",
         "detail": "backend.foodgram.api.mixin",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorOrStaffOrReadOnly",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.permissions",
+        "description": "backend.foodgram.api.permissions",
+        "peekOfCode": "class AuthorOrStaffOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на изменение только для служебного персонала и автора.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view, obj):\n        return request.method in SAFE_METHODS or (\n            request.user.is_authenticated\n            and (request.user == obj.author or request.user.is_staff)\n        )",
+        "detail": "backend.foodgram.api.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "AdminOrReadOnly",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.permissions",
+        "description": "backend.foodgram.api.permissions",
+        "peekOfCode": "class AdminOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на создание и изменение только для админов.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view):\n        return (\n            request.method in SAFE_METHODS\n            or request.user.is_authenticated\n            and request.user.is_staff",
+        "detail": "backend.foodgram.api.permissions",
         "documentation": {}
     },
     {
@@ -952,7 +1011,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.serializers",
         "description": "backend.foodgram.api.serializers",
-        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(\n        method_name=\"get_is_subscribed\"\n    )\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    class Meta:\n        model = User",
+        "peekOfCode": "class SubscriptionSerializer(serializers.ModelSerializer):\n    \"\"\"\n    Сериализатор для информации о подписке пользователя.\n    \"\"\"\n    is_subscribed = serializers.SerializerMethodField(\n        method_name=\"get_is_subscribed\"\n    )\n    recipes = serializers.SerializerMethodField(method_name=\"get_recipes\")\n    recipes_count = serializers.SerializerMethodField(\n        method_name=\"get_recipes_count\"",
         "detail": "backend.foodgram.api.serializers",
         "documentation": {}
     },
@@ -1074,11 +1133,101 @@
         "documentation": {}
     },
     {
+        "label": "FollowAuthorView",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)\n        if user.id == author.id:",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionListView",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.annotate(recipes_count=Count(\"recipes\")).all()\n    serializer_class = SubscriptionSerializer\n    filter_backends = (filters.SearchFilter,)\n    permission_class = (IsAuthenticated,)\n    search_fields = (\"^following__user\",)\n    def get_queryset(self):",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenDestroyView",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class CustomTokenDestroyView(TokenDestroyView):\n    \"\"\"\n    Пользовательский класс для удаления токена аутентификации.\n    \"\"\"\n    def post(self, request):\n        utils.logout_user(request)\n        return Response(status=status.HTTP_201_CREATED)\nclass RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeViewSet",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):\n    \"\"\"\n    ViewSet для модели Recipe.\n    Поддерживает операции CRUD:\n    (create, retrieve, update, delete) и список рецептов.\n    \"\"\"\n    queryset = Recipe.objects.select_related(\"author\").prefetch_related(\n        \"tags\", \"ingredients\"",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "TagsViewSet",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "IngredientViewSet",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения\n    списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    queryset = Ingredient.objects.all()\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "ERROR_SUBSCRIBE_SELF",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "ERROR_ALREADY_SUBSCRIBED",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "ERROR_NOT_SUBSCRIBED",
+        "kind": 5,
+        "importPath": "backend.foodgram.api.views",
+        "description": "backend.foodgram.api.views",
+        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)",
+        "detail": "backend.foodgram.api.views",
+        "documentation": {}
+    },
+    {
         "label": "Command",
         "kind": 6,
         "importPath": "backend.foodgram.core.commands",
         "description": "backend.foodgram.core.commands",
         "peekOfCode": "class Command(BaseCommand):\n    \"\"\"\n    Команда управления Django для заполнения\n    базы данных из предоставленных файлов.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.db = {\n            \"data/ingredients.csv\": Ingredient,\n            \"data/tags.csv\": Tag,",
+        "detail": "backend.foodgram.core.commands",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "backend.foodgram.core.commands",
+        "description": "backend.foodgram.core.commands",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass Command(BaseCommand):\n    \"\"\"\n    Команда управления Django для заполнения\n    базы данных из предоставленных файлов.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.db = {\n            \"data/ingredients.csv\": Ingredient,",
         "detail": "backend.foodgram.core.commands",
         "documentation": {}
     },
@@ -1123,7 +1272,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"name\",\n        \"author\",\n    )\n    list_filter = (",
+        "peekOfCode": "class RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.\n    \"\"\"\n    list_display = (\"id\", \"name\", \"author\", \"in_favorite\")\n    list_filter = (\n        \"name\",\n        \"author\",\n        \"tags\",\n    )",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1132,7 +1281,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class FavoriteRecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели FavoriteRecipe.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n@admin.register(ShoppingCart)",
+        "peekOfCode": "class FavoriteRecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели FavoriteRecipe.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    def get_queryset(self, request):",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1141,7 +1290,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class ShoppingListAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели ShoppingCart.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )",
+        "peekOfCode": "class ShoppingListAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели ShoppingCart.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    def get_queryset(self, request):",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1242,51 +1391,6 @@
         "description": "backend.foodgram.food.models",
         "peekOfCode": "class ShoppingCart(models.Model):\n    \"\"\"\n    Модель для представления списка покупок.\n    \"\"\"\n    recipe = models.ForeignKey(\n        Recipe,\n        on_delete=models.CASCADE,\n        verbose_name=\"Рецепт\",\n        related_name=\"shopping_recipe\",\n    )",
         "detail": "backend.foodgram.food.models",
-        "documentation": {}
-    },
-    {
-        "label": "AuthorOrStaffOrReadOnly",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.permissions",
-        "description": "backend.foodgram.food.permissions",
-        "peekOfCode": "class AuthorOrStaffOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на изменение только для служебного персонала и автора.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view, obj):\n        return request.method in SAFE_METHODS or (\n            request.user.is_authenticated\n            and (request.user == obj.author or request.user.is_staff)\n        )",
-        "detail": "backend.foodgram.food.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "AdminOrReadOnly",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.permissions",
-        "description": "backend.foodgram.food.permissions",
-        "peekOfCode": "class AdminOrReadOnly(BasePermission):\n    \"\"\"\n    Разрешение на создание и изменение только для админов.\n    Остальным только чтение объекта.\n    \"\"\"\n    def has_object_permission(self, request, view):\n        return (\n            request.method in SAFE_METHODS\n            or request.user.is_authenticated\n            and request.user.is_staff",
-        "detail": "backend.foodgram.food.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "RecipeViewSet",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.views",
-        "description": "backend.foodgram.food.views",
-        "peekOfCode": "class RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):\n    \"\"\"\n    ViewSet для модели Recipe.\n    Поддерживает операции CRUD:\n    (create, retrieve, update, delete) и список рецептов.\n    \"\"\"\n    queryset = Recipe.objects.select_related(\"author\").prefetch_related(\n        \"tags\", \"ingredients\"",
-        "detail": "backend.foodgram.food.views",
-        "documentation": {}
-    },
-    {
-        "label": "TagsViewSet",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.views",
-        "description": "backend.foodgram.food.views",
-        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
-        "detail": "backend.foodgram.food.views",
-        "documentation": {}
-    },
-    {
-        "label": "IngredientViewSet",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.views",
-        "description": "backend.foodgram.food.views",
-        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения\n    списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    queryset = Ingredient.objects.all()\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)",
-        "detail": "backend.foodgram.food.views",
         "documentation": {}
     },
     {
@@ -1602,60 +1706,6 @@
         "description": "backend.foodgram.users.models",
         "peekOfCode": "class Follow(models.Model):\n    \"\"\"\n    Модель подписки на авторов рецептов.\n    \"\"\"\n    user = models.ForeignKey(\n        User,\n        on_delete=models.CASCADE,\n        related_name=\"follower\",\n        verbose_name=\"Подписчик\",\n    )",
         "detail": "backend.foodgram.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "FollowAuthorView",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "class FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)\n        if user.id == author.id:",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
-        "label": "SubscriptionListView",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.all()\n    serializer_class = SubscriptionSerializer\n    filter_backends = (filters.SearchFilter,)\n    permission_class = (IsAuthenticated,)\n    search_fields = (\"^following__user\",)\n    def get_queryset(self):",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
-        "label": "CustomTokenDestroyView",
-        "kind": 6,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "class CustomTokenDestroyView(TokenDestroyView):\n    \"\"\"\n    Пользовательский класс для удаления токена аутентификации.\n    \"\"\"\n    def post(self, request):\n        utils.logout_user(request)\n        return Response(status=status.HTTP_201_CREATED)",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
-        "label": "ERROR_SUBSCRIBE_SELF",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_SUBSCRIBE_SELF = \"Нельзя подписаться на себя\"\nERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
-        "label": "ERROR_ALREADY_SUBSCRIBED",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_ALREADY_SUBSCRIBED = \"Вы уже подписаны на данного автора\"\nERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user",
-        "detail": "backend.foodgram.users.views",
-        "documentation": {}
-    },
-    {
-        "label": "ERROR_NOT_SUBSCRIBED",
-        "kind": 5,
-        "importPath": "backend.foodgram.users.views",
-        "description": "backend.foodgram.users.views",
-        "peekOfCode": "ERROR_NOT_SUBSCRIBED = \"Вы не подписаны на данного автора\"\nclass FollowAuthorView(ViewSet):\n    permission_classes = [IsAuthenticated]\n    @action(detail=True, methods=[\"post\"])\n    def subscribe(self, request, pk):\n        \"\"\"\n        Подписка на автора.\n        \"\"\"\n        user = request.user\n        author = get_object_or_404(User, pk=pk)",
-        "detail": "backend.foodgram.users.views",
         "documentation": {}
     },
     {
