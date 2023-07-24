@@ -1,14 +1,9 @@
 from api.mixin import MultiSerializerViewSetMixin
 from api.relation_handler_for_views import RelationHandler, create_shoping_cart
-from api.serializers import (
-    FavoriteRecipe,
-    IngredientSerializer,
-    RecipeListSerializer,
-    RecipeSerializer,
-    ShortRecipeSerializer,
-    SubscriptionSerializer,
-    TagsSerializer,
-)
+from api.serializers import (FavoriteRecipe, IngredientSerializer,
+                             RecipeListSerializer, RecipeSerializer,
+                             ShortRecipeSerializer, SubscriptionSerializer,
+                             TagsSerializer)
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.db.models import Count, Q
@@ -20,14 +15,14 @@ from djoser.views import TokenDestroyView
 from food.filters import IngredientFilter, RecipeFilter
 from food.models import Ingredient, Recipe, ShoppingCart, Tag
 from rest_framework import filters, status
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from users.models import Follow, User
-from rest_framework.decorators import api_view, permission_classes
+
 from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
 
 ERROR_SUBSCRIBE_SELF = "Нельзя подписаться на себя"
@@ -70,17 +65,18 @@ def follow_author(request, pk):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     if request.method == "DELETE":
-        try:
-            Follow.objects.get(user=user, author=author).delete()
+        deleted_count, _ = Follow.objects.filter(
+            user=user, author=author
+        ).delete()
 
-        except ObjectDoesNotExist:
+        if deleted_count == 0:
             return Response(
                 {"errors": ERROR_NOT_SUBSCRIBED},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        return HttpResponse(
-            "Вы успешно отписаны от этого автора",
+        return Response(
+            {"message": "Вы успешно отписаны от этого автора"},
             status=status.HTTP_204_NO_CONTENT,
         )
 

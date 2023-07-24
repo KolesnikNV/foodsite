@@ -3,14 +3,8 @@ from django.db import transaction
 from djoser.serializers import UserCreateSerializer, UserSerializer
 from drf_base64.fields import Base64ImageField
 from food.custom_fields import Hex2NameColor
-from food.models import (
-    FavoriteRecipe,
-    Ingredient,
-    Recipe,
-    RecipeIngredient,
-    ShoppingCart,
-    Tag,
-)
+from food.models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
+                         ShoppingCart, Tag)
 from rest_framework import exceptions, serializers
 from users.models import Follow, User
 
