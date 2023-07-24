@@ -753,14 +753,6 @@
         "documentation": {}
     },
     {
-        "label": "ObjectDoesNotExist",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
         "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
