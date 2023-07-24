@@ -126,12 +126,8 @@ class SubscriptionSerializer(serializers.ModelSerializer):
         return Follow.objects.filter(user=user, author=obj).exists()
 
     def get_recipes(self, obj):
-        """
-        Возвращает информацию о рецептах пользователя,
-        на которого подписан текущий пользователь.
-        """
         request = self.context.get("request")
-        recipes = obj.recipe_set.all()[:6]
+        recipes = Recipe.objects.filter(favorites__user=obj).all()[:6]
         context = {"request": request}
         return FollowRecipeSerializer(recipes, many=True, context=context).data
 

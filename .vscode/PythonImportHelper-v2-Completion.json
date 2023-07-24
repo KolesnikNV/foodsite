@@ -56,6 +56,22 @@
         "documentation": {}
     },
     {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
         "label": "SAFE_METHODS",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
@@ -809,14 +825,6 @@
         "documentation": {}
     },
     {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
-        "documentation": {}
-    },
-    {
         "label": "ModelViewSet",
         "importPath": "rest_framework.viewsets",
         "description": "rest_framework.viewsets",
@@ -1026,6 +1034,15 @@
         "documentation": {}
     },
     {
+        "label": "LimitPageNumberPaginator",
+        "kind": 6,
+        "importPath": "backend.foodgram.api.paginator",
+        "description": "backend.foodgram.api.paginator",
+        "peekOfCode": "class LimitPageNumberPaginator(PageNumberPagination):\n    page_size_query_param = \"limit\"",
+        "detail": "backend.foodgram.api.paginator",
+        "documentation": {}
+    },
+    {
         "label": "AuthorOrStaffOrReadOnly",
         "kind": 6,
         "importPath": "backend.foodgram.api.permissions",
@@ -1201,7 +1218,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.api.urls",
         "description": "backend.foodgram.api.urls",
-        "peekOfCode": "app_name = \"api\"\nrouter = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)",
+        "peekOfCode": "app_name = \"api\"\nrouter = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    \"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)",
         "detail": "backend.foodgram.api.urls",
         "documentation": {}
     },
@@ -1210,7 +1227,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.api.urls",
         "description": "backend.foodgram.api.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    r\"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)\nurlpatterns = [",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r\"tags\", TagsViewSet, basename=\"tags\")\nrouter.register(r\"ingredients\", IngredientViewSet, basename=\"ingredients\")\nrouter.register(r\"recipes\", RecipeViewSet, basename=\"recipes\")\nrouter.register(\n    \"users/subscriptions\",\n    SubscriptionListView,\n    basename=\"subscriptions\",\n)\nurlpatterns = [",
         "detail": "backend.foodgram.api.urls",
         "documentation": {}
     },
@@ -1228,7 +1245,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.annotate(recipes_count=Count(\"recipes\")).all()\n    serializer_class = SubscriptionSerializer\n    filter_backends = (filters.SearchFilter,)\n    permission_class = (IsAuthenticated,)\n    search_fields = (\"^follower__user\",)\n    def get_queryset(self):",
+        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.annotate(recipes_count=Count(\"recipes\")).all()\n    serializer_class = SubscriptionSerializer\n    permission_class = (IsAuthenticated,)\n    def get_queryset(self):\n        user = self.request.user\n        new_queryset = User.objects.filter(follower__user=user).annotate(",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },

@@ -18,7 +18,7 @@ router.register(r"tags", TagsViewSet, basename="tags")
 router.register(r"ingredients", IngredientViewSet, basename="ingredients")
 router.register(r"recipes", RecipeViewSet, basename="recipes")
 router.register(
-    r"users/subscriptions",
+    "users/subscriptions",
     SubscriptionListView,
     basename="subscriptions",
 )

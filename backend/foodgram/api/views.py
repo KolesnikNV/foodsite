@@ -92,13 +92,12 @@ class SubscriptionListView(ReadOnlyModelViewSet):
 
     queryset = User.objects.annotate(recipes_count=Count("recipes")).all()
     serializer_class = SubscriptionSerializer
-    filter_backends = (filters.SearchFilter,)
+
     permission_class = (IsAuthenticated,)
-    search_fields = ("^follower__user",)
 
     def get_queryset(self):
         user = self.request.user
-        new_queryset = User.objects.filter(follower=user).annotate(
+        new_queryset = User.objects.filter(follower__user=user).annotate(
             recipes_count=Count("recipes")
         )
         return new_queryset
