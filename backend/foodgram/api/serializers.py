@@ -99,9 +99,7 @@ class SubscriptionSerializer(serializers.ModelSerializer):
         method_name="get_is_subscribed"
     )
     recipes = serializers.SerializerMethodField(method_name="get_recipes")
-    recipes_count = serializers.SerializerMethodField(
-        method_name="get_recipes_count"
-    )
+    recipes_count = serializers.IntegerField()
 
     class Meta:
         model = User
@@ -227,7 +225,7 @@ class RecipeListSerializer(serializers.ModelSerializer):
     author = CustomUserSerializer(read_only=True)
     tags = TagsSerializer(many=True)
     ingredients = serializers.SerializerMethodField()
-    is_favorite = serializers.SerializerMethodField()
+    is_favorited = serializers.SerializerMethodField()
     is_in_shopping_cart = serializers.SerializerMethodField()
 
     def get_ingredients(self, obj):
@@ -239,7 +237,7 @@ class RecipeListSerializer(serializers.ModelSerializer):
         serializer = RecipeIngredientSerializer(ingredients, many=True)
         return serializer.data
 
-    def get_is_favorite(self, obj):
+    def get_is_favorited(self, obj):
         """Получает значение, указывающее, добавлен ли рецепт
         в избранное у пользователя."""
         user = self.context["request"].user
@@ -317,7 +315,6 @@ class RecipeSerializer(serializers.ModelSerializer):
     @transaction.atomic
     def get_ingredients_data(self, ingredients):
         """Получть ингредиенты из запроса."""
-
         ingredient_ids = [ingredient["id"] for ingredient in ingredients]
 
         ingredients_queryset = Ingredient.objects.filter(pk__in=ingredient_ids)

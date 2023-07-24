@@ -1,11 +1,17 @@
 from api.mixin import MultiSerializerViewSetMixin
 from api.relation_handler_for_views import RelationHandler, create_shoping_cart
-from api.serializers import (FavoriteRecipe, IngredientSerializer,
-                             RecipeListSerializer, RecipeSerializer,
-                             ShortRecipeSerializer, SubscriptionSerializer,
-                             TagsSerializer)
+from api.serializers import (
+    FavoriteRecipe,
+    IngredientSerializer,
+    RecipeListSerializer,
+    RecipeSerializer,
+    ShortRecipeSerializer,
+    SubscriptionSerializer,
+    TagsSerializer,
+)
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
-from django.db.models import Count, F, Q
+from django.db.models import Count, Q
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -19,9 +25,9 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
-from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet, ViewSet
+from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from users.models import Follow, User
-
+from rest_framework.decorators import api_view, permission_classes
 from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
 
 ERROR_SUBSCRIBE_SELF = "Нельзя подписаться на себя"
@@ -29,17 +35,17 @@ ERROR_ALREADY_SUBSCRIBED = "Вы уже подписаны на данного �
 ERROR_NOT_SUBSCRIBED = "Вы не подписаны на данного автора"
 
 
-class FollowAuthorView(ViewSet):
-    permission_classes = [IsAuthenticated]
+@api_view(["POST", "DELETE"])
+@permission_classes([IsAuthenticated])
+def follow_author(request, pk):
+    """
+    Подписка на автора.
+    """
+    user = get_object_or_404(User, username=request.user.username)
 
-    @action(detail=True, methods=["post"])
-    def subscribe(self, request, pk):
-        """
-        Подписка на автора.
-        """
-        user = request.user
-        author = get_object_or_404(User, pk=pk)
+    author = get_object_or_404(User, pk=pk)
 
+    if request.method == "POST":
         if user.id == author.id:
             return Response(
                 {"errors": ERROR_SUBSCRIBE_SELF},
@@ -48,9 +54,7 @@ class FollowAuthorView(ViewSet):
 
         try:
             Follow.objects.create(user=user, author=author)
-            User.objects.filter(pk=user.pk).update(
-                recipes_count=F("recipes_count") + 1
-            )
+
         except IntegrityError:
             return Response(
                 {"errors": ERROR_ALREADY_SUBSCRIBED},
@@ -58,31 +62,24 @@ class FollowAuthorView(ViewSet):
             )
 
         follows = User.objects.filter(username=author)
+
         serializer = SubscriptionSerializer(
             follows, context={"request": request}, many=True
         )
+
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    @action(detail=True, methods=["delete"])
-    def unsubscribe(self, request, pk):
-        """
-        Отписка от автора.
-        """
-        user = request.user
-        author = get_object_or_404(User, pk=pk)
+    if request.method == "DELETE":
+        try:
+            Follow.objects.get(user=user, author=author).delete()
 
-        subscriptions = Follow.objects.filter(user=user, author=author)
-
-        num_deleted, _ = subscriptions.delete()
-        if num_deleted == 0:
+        except ObjectDoesNotExist:
             return Response(
                 {"errors": ERROR_NOT_SUBSCRIBED},
                 status=status.HTTP_400_BAD_REQUEST,
             )
-        User.objects.filter(pk=user.pk).update(
-            recipes_count=F("recipes_count") - 1
-        )
-        return Response(
+
+        return HttpResponse(
             "Вы успешно отписаны от этого автора",
             status=status.HTTP_204_NO_CONTENT,
         )
@@ -97,11 +94,13 @@ class SubscriptionListView(ReadOnlyModelViewSet):
     serializer_class = SubscriptionSerializer
     filter_backends = (filters.SearchFilter,)
     permission_class = (IsAuthenticated,)
-    search_fields = ("^following__user",)
+    search_fields = ("^follower__user",)
 
     def get_queryset(self):
         user = self.request.user
-        new_queryset = User.objects.filter(following__user=user)
+        new_queryset = User.objects.filter(follower=user).annotate(
+            recipes_count=Count("recipes")
+        )
         return new_queryset
 
 

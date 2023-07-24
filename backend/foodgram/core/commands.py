@@ -1,7 +1,7 @@
 import logging
+import pandas as pd
 
 from django.core.management.base import BaseCommand
-import pandas as pd
 from food.models import Ingredient, Tag
 
 logger = logging.getLogger(__name__)

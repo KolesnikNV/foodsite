@@ -1,11 +1,14 @@
-from django.db.models import F, Q, Sum
+from django.db.models import F, Sum
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 from food.models import Ingredient, ShoppingCart
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
-from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
-                                   HTTP_400_BAD_REQUEST)
+from rest_framework.status import (
+    HTTP_201_CREATED,
+    HTTP_204_NO_CONTENT,
+    HTTP_400_BAD_REQUEST,
+)
 
 
 class RelationHandler:
@@ -25,17 +28,14 @@ class RelationHandler:
         return Response(serializer.data, status=HTTP_201_CREATED)
 
     def _delete_relation(self, model_class, q):
-        deleted, _ = (
-            model_class.objects.filter(q & Q(user=self.request.user))
-            .first()
-            .delete()
-        )
-        if not deleted:
+        try:
+            obj = model_class.objects.get(q, user=self.request.user)
+            obj.delete()
+        except model_class.DoesNotExist:
             return Response(
                 {"error": f"{model_class.__name__} не существует"},
                 status=HTTP_400_BAD_REQUEST,
             )
-
         return Response(status=HTTP_204_NO_CONTENT)
 
 
