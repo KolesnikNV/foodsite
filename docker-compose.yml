@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   db:
-    container_name: "db"
+    # container_name: "db"
     image: postgres:15.0-alpine
     restart: always
     volumes:
@@ -17,7 +17,8 @@ services:
       - foodgram_network
 
   backend:
-    container_name: "backend"
+    # container_name: "backend"
+    image: nkoles/foodgram_backend
     build:
       context: ./backend/
       dockerfile: Dockerfile
@@ -31,7 +32,8 @@ services:
       - foodgram_network
 
   frontend:
-    container_name: "frontend"
+    # container_name: "frontend"
+    image: nkoles/foodgram_frontend
     build:
       context: ./frontend/
       dockerfile: Dockerfile
@@ -43,7 +45,7 @@ services:
       - foodgram_network
 
   nginx:
-    container_name: "nginx"
+    # container_name: "nginx"
     image: nginx:1.19.3
     ports:
       - "80:80"

@@ -1,14 +1,9 @@
 from api.mixin import MultiSerializerViewSetMixin
 from api.relation_handler_for_views import RelationHandler, create_shoping_cart
-from api.serializers import (
-    FavoriteRecipe,
-    IngredientSerializer,
-    RecipeListSerializer,
-    RecipeSerializer,
-    ShortRecipeSerializer,
-    SubscriptionSerializer,
-    TagsSerializer,
-)
+from api.serializers import (FavoriteRecipe, IngredientSerializer,
+                             RecipeListSerializer, RecipeSerializer,
+                             ShortRecipeSerializer, SubscriptionSerializer,
+                             TagsSerializer)
 from django.db import IntegrityError
 from django.db.models import Count, Q
 from django.http import HttpResponse
