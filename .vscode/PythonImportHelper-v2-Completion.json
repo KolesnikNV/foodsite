@@ -842,20 +842,20 @@
         "documentation": {}
     },
     {
-        "label": "BaseCommand",
-        "importPath": "django.core.management.base",
-        "description": "django.core.management.base",
-        "isExtraImport": true,
-        "detail": "django.core.management.base",
-        "documentation": {}
-    },
-    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pandas",
         "description": "pandas",
         "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
         "documentation": {}
     },
     {
