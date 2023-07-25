@@ -1,9 +1,10 @@
+from django.core.management.base import BaseCommand
 import logging
 
 import pandas as pd
-from django.core.management.base import BaseCommand
 
 from food.models import Ingredient, Tag
+
 
 logger = logging.getLogger(__name__)
 
