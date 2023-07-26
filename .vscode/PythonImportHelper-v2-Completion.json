@@ -152,14 +152,6 @@
         "documentation": {}
     },
     {
-        "label": "HTTP_404_NOT_FOUND",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
-        "isExtraImport": true,
-        "detail": "rest_framework.status",
-        "documentation": {}
-    },
-    {
         "label": "HTTP_400_BAD_REQUEST",
         "importPath": "rest_framework.status",
         "description": "rest_framework.status",
@@ -177,14 +169,6 @@
     },
     {
         "label": "F",
-        "importPath": "django.db.models",
-        "description": "django.db.models",
-        "isExtraImport": true,
-        "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
-        "label": "Q",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,

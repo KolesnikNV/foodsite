@@ -1,9 +1,12 @@
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
-from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
-                                   HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND,)
+from rest_framework.status import (
+    HTTP_201_CREATED,
+    HTTP_204_NO_CONTENT,
+    HTTP_400_BAD_REQUEST,
+)
 
-from django.db.models import F, Q, Sum
+from django.db.models import F, Sum
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 
