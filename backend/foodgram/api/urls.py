@@ -1,9 +1,12 @@
-from api.views import (CustomTokenDestroyView, IngredientViewSet,
-                       RecipeViewSet, SubscriptionListView, TagsViewSet,
-                       follow_author)
-from django.urls import include, path
 from djoser.views import TokenCreateView
 from rest_framework.routers import DefaultRouter
+
+from django.urls import include, path
+
+from api.views import (CustomTokenDestroyView, IngredientViewSet,
+                       RecipeViewSet, SubscriptionListView, TagsViewSet,
+                       follow_author,)
+
 
 app_name = "api"
 

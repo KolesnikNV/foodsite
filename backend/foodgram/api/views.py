@@ -1,28 +1,32 @@
+from django_filters.rest_framework import DjangoFilterBackend
+from djoser import utils
+from djoser.views import TokenDestroyView
+from rest_framework import filters, status
+from rest_framework.decorators import action, api_view, permission_classes
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.status import (HTTP_400_BAD_REQUEST,
+                                   HTTP_405_METHOD_NOT_ALLOWED,)
+from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
+
+from django.db import IntegrityError
+from django.db.models import Count
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, redirect
+
 from api.mixin import MultiSerializerViewSetMixin
 from api.relation_handler_for_views import RelationHandler, create_shoping_cart
 from api.serializers import (FavoriteRecipe, IngredientSerializer,
                              RecipeListSerializer, RecipeSerializer,
                              ShortRecipeSerializer, SubscriptionSerializer,
-                             TagsSerializer)
-from django.db import IntegrityError
-from django.db.models import Count, Q
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
-from django_filters.rest_framework import DjangoFilterBackend
-from djoser import utils
-from djoser.views import TokenDestroyView
+                             TagsSerializer,)
 from food.filters import IngredientFilter, RecipeFilter
 from food.models import Ingredient, Recipe, ShoppingCart, Tag
-from rest_framework import filters, status
-from rest_framework.decorators import action, api_view, permission_classes
-from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.status import HTTP_400_BAD_REQUEST
-from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from users.models import Follow, User
 
 from .permissions import AdminOrReadOnly, AuthorOrStaffOrReadOnly
+
 
 ERROR_SUBSCRIBE_SELF = "Нельзя подписаться на себя"
 ERROR_ALREADY_SUBSCRIBED = "Вы уже подписаны на данного автора"
@@ -105,7 +109,7 @@ class CustomTokenDestroyView(TokenDestroyView):
 
     def post(self, request):
         utils.logout_user(request)
-        return Response(status=status.HTTP_201_CREATED)
+        return redirect("/auth/token/login/")
 
 
 class RecipeViewSet(
@@ -133,6 +137,11 @@ class RecipeViewSet(
         "update": RecipeSerializer,
     }
 
+    def get_permissions(self):
+        if self.action == "list":
+            return [AllowAny()]
+        return super().get_permissions()
+
     def get_serializer_class(self):
         """
         Возвращает класс сериализатора в зависимости от действия запроса.
@@ -145,42 +154,42 @@ class RecipeViewSet(
         """
         Добавляет endpoint для добавления рецепта в избранное.
         """
-        return
+        return Response(status=HTTP_405_METHOD_NOT_ALLOWED)
 
     @favorite.mapping.post
     def add_to_favorites(self, request, pk):
         """
         Добавляет рецепт в список избранных у текущего пользователя.
         """
-        return self._create_relation(FavoriteRecipe, pk)
+        return self._create_relation(FavoriteRecipe, pk, request.user)
 
     @favorite.mapping.delete
     def delete_recipe_from_favorites(self, request, pk):
         """
         Удаляет рецепт из списка избранных у текущего пользователя.
         """
-        return self._delete_relation(FavoriteRecipe, pk)
+        return self._delete_relation(FavoriteRecipe, request.user, pk)
 
     @action(detail=True, permission_classes=[IsAuthenticated])
     def shopping_cart(self, pk):
         """
         Добавляет endpoint для добавления рецепта в список покупок.
         """
-        return
+        return Response(status=HTTP_405_METHOD_NOT_ALLOWED)
 
     @shopping_cart.mapping.post
     def add_recipe_to_cart(self, request, pk):
         """
         Добавляет рецепт в корзину покупок текущего пользователя.
         """
-        return self._create_relation(ShoppingCart, pk)
+        return self._create_relation(ShoppingCart, pk, request.user)
 
     @shopping_cart.mapping.delete
     def delete_recipe_from_cart(self, request, pk):
         """
         Удаляет рецепт из корзины покупок текущего пользователя.
         """
-        return self._delete_relation(ShoppingCart, Q(recipe__id=pk))
+        return self._delete_relation(ShoppingCart, request.user, pk)
 
     @action(
         methods=("get",), detail=False, permission_classes=(IsAuthenticated,)

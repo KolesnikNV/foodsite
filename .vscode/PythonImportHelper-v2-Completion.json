@@ -88,6 +88,14 @@
         "documentation": {}
     },
     {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "IsAuthenticated",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
@@ -96,7 +104,87 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "ModelSerializer",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_201_CREATED",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_204_NO_CONTENT",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_400_BAD_REQUEST",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_404_NOT_FOUND",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_400_BAD_REQUEST",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_405_METHOD_NOT_ALLOWED",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
         "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,
@@ -113,14 +201,6 @@
     },
     {
         "label": "Count",
-        "importPath": "django.db.models",
-        "description": "django.db.models",
-        "isExtraImport": true,
-        "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
-        "label": "Q",
         "importPath": "django.db.models",
         "description": "django.db.models",
         "isExtraImport": true,
@@ -169,6 +249,14 @@
     },
     {
         "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -288,59 +376,67 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
+        "label": "UserCreateSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
         "isExtraImport": true,
-        "detail": "rest_framework.response",
+        "detail": "djoser.serializers",
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
+        "label": "UserSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
         "isExtraImport": true,
-        "detail": "rest_framework.response",
+        "detail": "djoser.serializers",
         "documentation": {}
     },
     {
-        "label": "ModelSerializer",
-        "importPath": "rest_framework.serializers",
-        "description": "rest_framework.serializers",
+        "label": "Base64ImageField",
+        "importPath": "drf_base64.fields",
+        "description": "drf_base64.fields",
         "isExtraImport": true,
-        "detail": "rest_framework.serializers",
+        "detail": "drf_base64.fields",
         "documentation": {}
     },
     {
-        "label": "HTTP_201_CREATED",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
+        "label": "exceptions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "rest_framework.status",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "HTTP_204_NO_CONTENT",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "rest_framework.status",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "HTTP_400_BAD_REQUEST",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
+        "label": "filters",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "rest_framework.status",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "HTTP_400_BAD_REQUEST",
-        "importPath": "rest_framework.status",
-        "description": "rest_framework.status",
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "rest_framework.status",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -457,30 +553,6 @@
         "documentation": {}
     },
     {
-        "label": "UserCreateSerializer",
-        "importPath": "djoser.serializers",
-        "description": "djoser.serializers",
-        "isExtraImport": true,
-        "detail": "djoser.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UserSerializer",
-        "importPath": "djoser.serializers",
-        "description": "djoser.serializers",
-        "isExtraImport": true,
-        "detail": "djoser.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "Base64ImageField",
-        "importPath": "drf_base64.fields",
-        "description": "drf_base64.fields",
-        "isExtraImport": true,
-        "detail": "drf_base64.fields",
-        "documentation": {}
-    },
-    {
         "label": "Hex2NameColor",
         "importPath": "food.custom_fields",
         "description": "food.custom_fields",
@@ -489,46 +561,6 @@
         "documentation": {}
     },
     {
-        "label": "exceptions",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "filters",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "Follow",
         "importPath": "users.models",
         "description": "users.models",
@@ -566,6 +598,62 @@
         "description": "users.models",
         "isExtraImport": true,
         "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "TokenCreateView",
+        "importPath": "djoser.views",
+        "description": "djoser.views",
+        "isExtraImport": true,
+        "detail": "djoser.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenDestroyView",
+        "importPath": "djoser.views",
+        "description": "djoser.views",
+        "isExtraImport": true,
+        "detail": "djoser.views",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -617,59 +705,67 @@
         "documentation": {}
     },
     {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "DjangoFilterBackend",
+        "importPath": "django_filters.rest_framework",
+        "description": "django_filters.rest_framework",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "django_filters.rest_framework",
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "utils",
+        "importPath": "djoser",
+        "description": "djoser",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "djoser",
         "documentation": {}
     },
     {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
-        "label": "TokenCreateView",
-        "importPath": "djoser.views",
-        "description": "djoser.views",
+        "label": "permission_classes",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
         "isExtraImport": true,
-        "detail": "djoser.views",
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
-        "label": "TokenDestroyView",
-        "importPath": "djoser.views",
-        "description": "djoser.views",
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
         "isExtraImport": true,
-        "detail": "djoser.views",
+        "detail": "rest_framework.viewsets",
         "documentation": {}
     },
     {
-        "label": "DefaultRouter",
-        "importPath": "rest_framework.routers",
-        "description": "rest_framework.routers",
+        "label": "ReadOnlyModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
         "isExtraImport": true,
-        "detail": "rest_framework.routers",
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -753,30 +849,6 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "DjangoFilterBackend",
-        "importPath": "django_filters.rest_framework",
-        "description": "django_filters.rest_framework",
-        "isExtraImport": true,
-        "detail": "django_filters.rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "utils",
-        "importPath": "djoser",
-        "description": "djoser",
-        "isExtraImport": true,
-        "detail": "djoser",
-        "documentation": {}
-    },
-    {
         "label": "IngredientFilter",
         "importPath": "food.filters",
         "description": "food.filters",
@@ -790,46 +862,6 @@
         "description": "food.filters",
         "isExtraImport": true,
         "detail": "food.filters",
-        "documentation": {}
-    },
-    {
-        "label": "action",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "permission_classes",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "ModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "ReadOnlyModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
         "documentation": {}
     },
     {
@@ -1057,7 +1089,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.relation_handler_for_views",
         "description": "backend.foodgram.api.relation_handler_for_views",
-        "peekOfCode": "class RelationHandler:\n    add_serializer: ModelSerializer\n    def _create_relation(self, model_class, obj_id):\n        obj = get_object_or_404(self.queryset, pk=obj_id)\n        try:\n            model_class(None, obj.pk, self.request.user.pk).save()\n        except IntegrityError:\n            return Response(\n                {\"error\": \"Рецепт уже был добавлен.\"},\n                status=HTTP_400_BAD_REQUEST,",
+        "peekOfCode": "class RelationHandler:\n    add_serializer: ModelSerializer\n    def _create_relation(self, model_class, obj_id, user):\n        obj = get_object_or_404(self.queryset, pk=obj_id)\n        try:\n            model_class.objects.create(recipe=obj, user=user)\n        except IntegrityError:\n            return Response(\n                {\"error\": \"Рецепт уже был добавлен.\"},\n                status=HTTP_400_BAD_REQUEST,",
         "detail": "backend.foodgram.api.relation_handler_for_views",
         "documentation": {}
     },
@@ -1246,7 +1278,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class CustomTokenDestroyView(TokenDestroyView):\n    \"\"\"\n    Пользовательский класс для удаления токена аутентификации.\n    \"\"\"\n    def post(self, request):\n        utils.logout_user(request)\n        return Response(status=status.HTTP_201_CREATED)\nclass RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):",
+        "peekOfCode": "class CustomTokenDestroyView(TokenDestroyView):\n    \"\"\"\n    Пользовательский класс для удаления токена аутентификации.\n    \"\"\"\n    def post(self, request):\n        utils.logout_user(request)\n        return redirect(\"/auth/token/login/\")\nclass RecipeViewSet(\n    ModelViewSet, RelationHandler, MultiSerializerViewSetMixin\n):",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db.models import Count
 
 from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
-                     ShoppingCart, Tag)
+                     ShoppingCart, Tag,)
 
 
 @admin.register(Tag)

@@ -1,9 +1,10 @@
 import base64
 
+from rest_framework import serializers
+
 from django.core import validators
 from django.core.files.base import ContentFile
 from django.db import models
-from rest_framework import serializers
 
 
 class Hex2NameColor(models.CharField):

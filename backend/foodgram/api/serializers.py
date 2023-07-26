@@ -1,11 +1,13 @@
-from django.core.validators import MinValueValidator
-from django.db import transaction
 from djoser.serializers import UserCreateSerializer, UserSerializer
 from drf_base64.fields import Base64ImageField
+from rest_framework import exceptions, serializers
+
+from django.core.validators import MinValueValidator
+from django.db import transaction
+
 from food.custom_fields import Hex2NameColor
 from food.models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
-                         ShoppingCart, Tag)
-from rest_framework import exceptions, serializers
+                         ShoppingCart, Tag,)
 from users.models import Follow, User
 
 

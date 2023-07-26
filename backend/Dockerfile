@@ -6,3 +6,4 @@ COPY foodgram/ ./
 COPY docker-entrypoint.sh .
 RUN chmod +x docker-entrypoint.sh
 ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["gunicorn", "--bind", "foodgram.wsgi:application", "backend.wsgi"] 
