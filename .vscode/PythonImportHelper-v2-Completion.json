@@ -168,14 +168,6 @@
         "documentation": {}
     },
     {
-        "label": "F",
-        "importPath": "django.db.models",
-        "description": "django.db.models",
-        "isExtraImport": true,
-        "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
         "label": "Sum",
         "importPath": "django.db.models",
         "description": "django.db.models",
@@ -248,7 +240,7 @@
         "documentation": {}
     },
     {
-        "label": "Ingredient",
+        "label": "RecipeIngredient",
         "importPath": "food.models",
         "description": "food.models",
         "isExtraImport": true,
@@ -769,7 +761,7 @@
         "documentation": {}
     },
     {
-        "label": "create_shoping_cart",
+        "label": "create_shopping_cart",
         "importPath": "api.relation_handler_for_views",
         "description": "api.relation_handler_for_views",
         "isExtraImport": true,
@@ -849,6 +841,14 @@
         "documentation": {}
     },
     {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -897,6 +897,14 @@
         "description": "django.conf",
         "isExtraImport": true,
         "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "AutocompleteFilter",
+        "importPath": "admin_auto_filters.filters",
+        "description": "admin_auto_filters.filters",
+        "isExtraImport": true,
+        "detail": "admin_auto_filters.filters",
         "documentation": {}
     },
     {
@@ -1078,11 +1086,11 @@
         "documentation": {}
     },
     {
-        "label": "create_shoping_cart",
+        "label": "create_shopping_cart",
         "kind": 2,
         "importPath": "backend.foodgram.api.relation_handler_for_views",
         "description": "backend.foodgram.api.relation_handler_for_views",
-        "peekOfCode": "def create_shoping_cart(user):\n    shopping_cart = []\n    shopping_carts = ShoppingCart.objects.filter(user=user)\n    if not shopping_carts.exists():\n        return shopping_cart\n    ingredients = (\n        Ingredient.objects.filter(\n            recipeingredient__recipe__shopping_recipe__in=shopping_carts\n        )\n        .values(\"name\", measurement=F(\"measurement_unit\"))",
+        "peekOfCode": "def create_shopping_cart(user):\n    shopping_cart = []\n    shopping_carts = ShoppingCart.objects.filter(user=user)\n    if not shopping_carts.exists():\n        return shopping_cart\n    recipe_ingredients = RecipeIngredient.objects.filter(\n        recipe__shopping_recipe__user=user\n    )\n    ingredients = recipe_ingredients.values(\n        \"ingredient__name\", \"ingredient__measurement_unit\"",
         "detail": "backend.foodgram.api.relation_handler_for_views",
         "documentation": {}
     },
@@ -1253,7 +1261,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.annotate(recipes_count=Count(\"recipes\")).all()\n    serializer_class = SubscriptionSerializer\n    permission_class = (IsAuthenticated,)\n    def get_queryset(self):\n        user = self.request.user\n        new_queryset = User.objects.filter(follower__user=user).annotate(",
+        "peekOfCode": "class SubscriptionListView(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для генерации списка подписок пользователя.\n    \"\"\"\n    queryset = User.objects.annotate(recipes_count=Count(\"recipes\")).all()\n    serializer_class = SubscriptionSerializer\n    permission_class = (IsAuthenticated,)\n    def get_queryset(self):\n        user = self.request.user\n        new_queryset = User.objects.filter(following__user=user).annotate(",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },
@@ -1280,7 +1288,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
+        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nfrom urllib.parse import unquote\nclass IngredientViewSet(ReadOnlyModelViewSet):",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },
@@ -1289,7 +1297,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения\n    списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    queryset = Ingredient.objects.all()\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)",
+        "peekOfCode": "class IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Ingredient.\n    Поддерживает только операции чтения\n    списка ингредиентов и деталей отдельного ингредиента.\n    \"\"\"\n    serializer_class = IngredientSerializer\n    permission_classes = (AdminOrReadOnly,)\n    filter_backends = (filters.SearchFilter,)\n    search_fields = (\"name\",)",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },
@@ -1397,7 +1405,25 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class RecipeIngredientsAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели RecipeIngredient.\n    \"\"\"\n    list_display = (\"id\", \"recipe\", \"ingredient\", \"amount\")\n    list_filter = (\"id\", \"recipe\", \"ingredient\")\n@admin.register(Recipe)\nclass RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.",
+        "peekOfCode": "class RecipeIngredientsAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели RecipeIngredient.\n    \"\"\"\n    list_display = (\"id\", \"recipe\", \"ingredient\", \"amount\")\n    list_filter = (\"id\", \"recipe\", \"ingredient\")\n    list_display_links = (\"id\", \"recipe\")\nclass AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"",
+        "detail": "backend.foodgram.food.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorAutocompleteFilter",
+        "kind": 6,
+        "importPath": "backend.foodgram.food.admin",
+        "description": "backend.foodgram.food.admin",
+        "peekOfCode": "class AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"\n# Определяем фильтр с автозаполнением для поля \"tags\"\nclass TagsAutocompleteFilter(AutocompleteFilter):\n    title = \"Tags\"\n    field_name = \"tags\"\n@admin.register(Recipe)\nclass RecipeAdmin(admin.ModelAdmin):\n    \"\"\"",
+        "detail": "backend.foodgram.food.admin",
+        "documentation": {}
+    },
+    {
+        "label": "TagsAutocompleteFilter",
+        "kind": 6,
+        "importPath": "backend.foodgram.food.admin",
+        "description": "backend.foodgram.food.admin",
+        "peekOfCode": "class TagsAutocompleteFilter(AutocompleteFilter):\n    title = \"Tags\"\n    field_name = \"tags\"\n@admin.register(Recipe)\nclass RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.\n    \"\"\"\n    list_display = (\"id\", \"name\", \"author\", \"favorites\")\n    list_filter = (",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1406,7 +1432,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.\n    \"\"\"\n    list_display = (\"id\", \"name\", \"author\", \"in_favorite\")\n    list_filter = (\n        \"name\",\n        \"author\",\n        \"tags\",\n    )",
+        "peekOfCode": "class RecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Recipe.\n    \"\"\"\n    list_display = (\"id\", \"name\", \"author\", \"favorites\")\n    list_filter = (\n        AuthorAutocompleteFilter,\n        TagsAutocompleteFilter,\n    )\n    list_display_links = (\"id\", \"name\")",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1415,7 +1441,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class FavoriteRecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели FavoriteRecipe.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    def get_queryset(self, request):",
+        "peekOfCode": "class FavoriteRecipeAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели FavoriteRecipe.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    list_display_links = (\"id\", \"user\")",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1424,7 +1450,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class ShoppingListAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели ShoppingCart.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    def get_queryset(self, request):",
+        "peekOfCode": "class ShoppingListAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели ShoppingCart.\n    \"\"\"\n    list_display = (\n        \"id\",\n        \"user\",\n        \"recipe\",\n    )\n    list_display_links = (\"id\", \"user\")",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },

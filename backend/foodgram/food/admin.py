@@ -1,3 +1,5 @@
+from admin_auto_filters.filters import AutocompleteFilter
+
 from django.contrib import admin
 from django.db.models import Count
 
@@ -17,6 +19,7 @@ class TagsAdmin(admin.ModelAdmin):
         "color",
         "slug",
     )
+    list_display_links = ("id", "name")
     search_fields = ("name",)
     ordering = ("color",)
 
@@ -35,13 +38,10 @@ class IngredientAdmin(admin.ModelAdmin):
     )
     search_fields = ("name",)
     ordering = ("measurement_unit",)
+    list_display_links = ("id", "name")
 
     def get_queryset(self, request):
-        return (
-            super()
-            .get_queryset(request)
-            .prefetch_related("recipeingredient_set")
-        )
+        return super().get_queryset(request).prefetch_related("recipes")
 
     def get_recipes_count(self, obj):
         """
@@ -71,6 +71,18 @@ class RecipeIngredientsAdmin(admin.ModelAdmin):
 
     list_display = ("id", "recipe", "ingredient", "amount")
     list_filter = ("id", "recipe", "ingredient")
+    list_display_links = ("id", "recipe")
+
+
+class AuthorAutocompleteFilter(AutocompleteFilter):
+    title = "Author"
+    field_name = "author"
+
+
+# Определяем фильтр с автозаполнением для поля "tags"
+class TagsAutocompleteFilter(AutocompleteFilter):
+    title = "Tags"
+    field_name = "tags"
 
 
 @admin.register(Recipe)
@@ -79,12 +91,12 @@ class RecipeAdmin(admin.ModelAdmin):
     Административный класс для модели Recipe.
     """
 
-    list_display = ("id", "name", "author", "in_favorite")
+    list_display = ("id", "name", "author", "favorites")
     list_filter = (
-        "name",
-        "author",
-        "tags",
+        AuthorAutocompleteFilter,
+        TagsAutocompleteFilter,
     )
+    list_display_links = ("id", "name")
 
     inlines = (RecipeIngredientsInline,)
 
@@ -94,16 +106,16 @@ class RecipeAdmin(admin.ModelAdmin):
             .get_queryset(request)
             .select_related("author")
             .prefetch_related("tags")
-            .annotate(favorites_count=Count("in_favorite"))
+            .annotate(favorites_count=Count("favorites"))
         )
 
-    def in_favorite(self, obj):
+    def favorites(self, obj):
         """
         Возвращает количество раз, когда рецепт был добавлен в избранное.
         """
         return obj.favorites_count
 
-    in_favorite.short_description = "Количество добавлений в избранное"
+    favorites.short_description = "Количество добавлений в избранное"
 
 
 @admin.register(FavoriteRecipe)
@@ -117,6 +129,7 @@ class FavoriteRecipeAdmin(admin.ModelAdmin):
         "user",
         "recipe",
     )
+    list_display_links = ("id", "user")
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related("user", "recipe")
@@ -133,6 +146,7 @@ class ShoppingListAdmin(admin.ModelAdmin):
         "user",
         "recipe",
     )
+    list_display_links = ("id", "user")
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related("user", "recipe")

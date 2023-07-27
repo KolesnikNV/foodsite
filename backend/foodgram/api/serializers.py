@@ -123,7 +123,9 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
     def get_recipes(self, obj):
         request = self.context.get("request")
-        recipes = Recipe.objects.filter(favorites__user=obj).all()[:6]
+        follow_objects = obj.following.all()
+        subscribed_authors = [follow.author for follow in follow_objects]
+        recipes = Recipe.objects.filter(author__in=subscribed_authors)[:6]
         context = {"request": request}
         return FollowRecipeSerializer(recipes, many=True, context=context).data
 

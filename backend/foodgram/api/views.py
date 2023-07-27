@@ -16,7 +16,8 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 
 from api.mixin import MultiSerializerViewSetMixin
-from api.relation_handler_for_views import RelationHandler, create_shoping_cart
+from api.relation_handler_for_views import (RelationHandler,
+                                            create_shopping_cart,)
 from api.serializers import (FavoriteRecipe, IngredientSerializer,
                              RecipeListSerializer, RecipeSerializer,
                              ShortRecipeSerializer, SubscriptionSerializer,
@@ -96,7 +97,7 @@ class SubscriptionListView(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        new_queryset = User.objects.filter(follower__user=user).annotate(
+        new_queryset = User.objects.filter(following__user=user).annotate(
             recipes_count=Count("recipes")
         )
         return new_queryset
@@ -126,7 +127,7 @@ class RecipeViewSet(
         "tags", "ingredients"
     )
     filter_backends = (DjangoFilterBackend,)
-    filterset_class = RecipeFilter
+    filterset_classes = RecipeFilter, IngredientFilter
     permission_class = (AuthorOrStaffOrReadOnly,)
     add_serializer = ShortRecipeSerializer
     pagination_class = PageNumberPagination
@@ -136,11 +137,6 @@ class RecipeViewSet(
         "create": RecipeSerializer,
         "update": RecipeSerializer,
     }
-
-    def get_permissions(self):
-        if self.action == "list":
-            return [AllowAny()]
-        return super().get_permissions()
 
     def get_serializer_class(self):
         """
@@ -204,7 +200,7 @@ class RecipeViewSet(
             return Response(status=HTTP_400_BAD_REQUEST)
 
         filename = f"{user.username}_shopping_cart.txt"
-        shopping_cart = create_shoping_cart(user)
+        shopping_cart = create_shopping_cart(user)
         response = HttpResponse(
             shopping_cart, content_type="text.txt; charset=utf-8"
         )
@@ -223,6 +219,9 @@ class TagsViewSet(ReadOnlyModelViewSet):
     pagination_class = None
 
 
+from urllib.parse import unquote
+
+
 class IngredientViewSet(ReadOnlyModelViewSet):
     """
     ViewSet для модели Ingredient.
@@ -230,10 +229,17 @@ class IngredientViewSet(ReadOnlyModelViewSet):
     списка ингредиентов и деталей отдельного ингредиента.
     """
 
-    queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
     permission_classes = (AdminOrReadOnly,)
     filter_backends = (filters.SearchFilter,)
-    filterset_class = IngredientFilter
-    search_fields = ("^name",)
+    search_fields = ("name",)
     pagination_class = None
+
+    def get_queryset(self):
+        name = self.request.query_params.get("name", None)
+        if name is not None:
+            name = unquote(name)
+        queryset = Ingredient.objects.all()
+        if name:
+            queryset = queryset.filter(name__istartswith=name)
+        return queryset

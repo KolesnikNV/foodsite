@@ -36,12 +36,18 @@ class RecipeFilter(filters.FilterSet):
         method="get_is_in_shopping_cart",
         label="shopping_cart",
     )
+    ingredients = filters.CharFilter(
+        field_name="ingredients__ingredient__name",
+        lookup_expr="icontains",
+        label="Ингредиенты",
+    )
 
     class Meta:
         model = Recipe
         fields = (
             "tags",
             "author",
+            "ingredients",
             "is_favorited",
             "is_in_shopping_cart",
         )

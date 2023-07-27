@@ -1,16 +1,13 @@
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
-from rest_framework.status import (
-    HTTP_201_CREATED,
-    HTTP_204_NO_CONTENT,
-    HTTP_400_BAD_REQUEST,
-)
+from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
+                                   HTTP_400_BAD_REQUEST,)
 
-from django.db.models import F, Sum
+from django.db.models import Sum
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 
-from food.models import Ingredient, ShoppingCart
+from food.models import RecipeIngredient, ShoppingCart
 
 
 class RelationHandler:
@@ -43,23 +40,23 @@ class RelationHandler:
         return Response(status=HTTP_204_NO_CONTENT)
 
 
-def create_shoping_cart(user):
+def create_shopping_cart(user):
     shopping_cart = []
 
     shopping_carts = ShoppingCart.objects.filter(user=user)
     if not shopping_carts.exists():
         return shopping_cart
 
-    ingredients = (
-        Ingredient.objects.filter(
-            recipeingredient__recipe__shopping_recipe__in=shopping_carts
-        )
-        .values("name", measurement=F("measurement_unit"))
-        .annotate(amount=Sum("recipeingredient__amount"))
+    recipe_ingredients = RecipeIngredient.objects.filter(
+        recipe__shopping_recipe__user=user
     )
 
+    ingredients = recipe_ingredients.values(
+        "ingredient__name", "ingredient__measurement_unit"
+    ).annotate(amount=Sum("amount"))
+
     shopping_cart = [
-        f'{ing["name"]}: {ing["amount"]} - {ing["measurement"]}.\n\n'
+        f'{ing["ingredient__name"]}: {ing["amount"]} - {ing["ingredient__measurement_unit"]}.\n\n'
         for ing in ingredients
     ]
 
