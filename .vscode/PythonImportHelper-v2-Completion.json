@@ -88,14 +88,6 @@
         "documentation": {}
     },
     {
-        "label": "AllowAny",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
         "label": "IsAuthenticated",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
@@ -681,6 +673,14 @@
         "documentation": {}
     },
     {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "DjangoFilterBackend",
         "importPath": "django_filters.rest_framework",
         "description": "django_filters.rest_framework",
@@ -838,14 +838,6 @@
         "description": "food.filters",
         "isExtraImport": true,
         "detail": "food.filters",
-        "documentation": {}
-    },
-    {
-        "label": "unquote",
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "isExtraImport": true,
-        "detail": "urllib.parse",
         "documentation": {}
     },
     {
@@ -1288,7 +1280,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.api.views",
         "description": "backend.foodgram.api.views",
-        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nfrom urllib.parse import unquote\nclass IngredientViewSet(ReadOnlyModelViewSet):",
+        "peekOfCode": "class TagsViewSet(ReadOnlyModelViewSet):\n    \"\"\"\n    ViewSet для модели Tags.\n    Поддерживает только операции чтения списка тегов и деталей отдельного тега.\n    \"\"\"\n    queryset = Tag.objects.all()\n    serializer_class = TagsSerializer\n    pagination_class = None\nclass IngredientViewSet(ReadOnlyModelViewSet):\n    \"\"\"",
         "detail": "backend.foodgram.api.views",
         "documentation": {}
     },

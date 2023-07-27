@@ -1,7 +1,10 @@
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
-from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
-                                   HTTP_400_BAD_REQUEST,)
+from rest_framework.status import (
+    HTTP_201_CREATED,
+    HTTP_204_NO_CONTENT,
+    HTTP_400_BAD_REQUEST,
+)
 
 from django.db.models import Sum
 from django.db.utils import IntegrityError
@@ -59,5 +62,4 @@ def create_shopping_cart(user):
         f'{ing["ingredient__name"]}: {ing["amount"]} - {ing["ingredient__measurement_unit"]}.\n\n'
         for ing in ingredients
     ]
-
     return shopping_cart

@@ -1,10 +1,12 @@
+from urllib.parse import unquote
+
 from django_filters.rest_framework import DjangoFilterBackend
 from djoser import utils
 from djoser.views import TokenDestroyView
 from rest_framework import filters, status
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import (HTTP_400_BAD_REQUEST,
                                    HTTP_405_METHOD_NOT_ALLOWED,)
@@ -217,9 +219,6 @@ class TagsViewSet(ReadOnlyModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagsSerializer
     pagination_class = None
-
-
-from urllib.parse import unquote
 
 
 class IngredientViewSet(ReadOnlyModelViewSet):
