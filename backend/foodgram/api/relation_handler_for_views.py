@@ -59,7 +59,8 @@ def create_shopping_cart(user):
     ).annotate(amount=Sum("amount"))
 
     shopping_cart = [
-        f'{ing["ingredient__name"]}: {ing["amount"]} - {ing["ingredient__measurement_unit"]}.\n\n'
+        f"""{ing["ingredient__name"]}: {ing["amount"]} 
+        - {ing["ingredient__measurement_unit"]}.\n\n"""
         for ing in ingredients
     ]
     return shopping_cart
