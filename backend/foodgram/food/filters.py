@@ -27,11 +27,11 @@ class RecipeFilter(filters.FilterSet):
     - по наличию в списке покупок.
     """
 
+    author = filters.NumberFilter(field_name="author", lookup_expr="exact")
     is_favorited = filters.BooleanFilter(
         method="get_is_favorited",
     )
     tags = filters.BaseInFilter(field_name="tags__slug", lookup_expr="in")
-
     is_in_shopping_cart = filters.BooleanFilter(
         method="get_is_in_shopping_cart",
         label="shopping_cart",
@@ -59,7 +59,6 @@ class RecipeFilter(filters.FilterSet):
         """
         request = self.request
         user = request.user
-
         if value:
             return queryset.filter(favorites__user=user)
         return queryset.exclude(favorites__user=user)

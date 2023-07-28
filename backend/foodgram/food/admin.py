@@ -3,8 +3,14 @@ from admin_auto_filters.filters import AutocompleteFilter
 from django.contrib import admin
 from django.db.models import Count
 
-from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
-                     ShoppingCart, Tag,)
+from .models import (
+    FavoriteRecipe,
+    Ingredient,
+    Recipe,
+    RecipeIngredient,
+    ShoppingCart,
+    Tag,
+)
 
 
 @admin.register(Tag)
@@ -70,8 +76,8 @@ class RecipeIngredientsAdmin(admin.ModelAdmin):
     """
 
     list_display = ("id", "recipe", "ingredient", "amount")
-    list_filter = ("id", "recipe", "ingredient")
     list_display_links = ("id", "recipe")
+    search_fields = ("recipe__name", "ingredient__name")
 
 
 class AuthorAutocompleteFilter(AutocompleteFilter):
@@ -97,7 +103,7 @@ class RecipeAdmin(admin.ModelAdmin):
         TagsAutocompleteFilter,
     )
     list_display_links = ("id", "name")
-
+    search_fields = ("name",)
     inlines = (RecipeIngredientsInline,)
 
     def get_queryset(self, request):

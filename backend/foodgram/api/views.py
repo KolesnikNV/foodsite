@@ -8,8 +8,10 @@ from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.status import (HTTP_400_BAD_REQUEST,
-                                   HTTP_405_METHOD_NOT_ALLOWED,)
+from rest_framework.status import (
+    HTTP_400_BAD_REQUEST,
+    HTTP_405_METHOD_NOT_ALLOWED,
+)
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
 from django.db import IntegrityError
@@ -18,12 +20,19 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 
 from api.mixin import MultiSerializerViewSetMixin
-from api.relation_handler_for_views import (RelationHandler,
-                                            create_shopping_cart,)
-from api.serializers import (FavoriteRecipe, IngredientSerializer,
-                             RecipeListSerializer, RecipeSerializer,
-                             ShortRecipeSerializer, SubscriptionSerializer,
-                             TagsSerializer,)
+from api.relation_handler_for_views import (
+    RelationHandler,
+    create_shopping_cart,
+)
+from api.serializers import (
+    FavoriteRecipe,
+    IngredientSerializer,
+    RecipeListSerializer,
+    RecipeSerializer,
+    ShortRecipeSerializer,
+    SubscriptionSerializer,
+    TagsSerializer,
+)
 from food.filters import IngredientFilter, RecipeFilter
 from food.models import Ingredient, Recipe, ShoppingCart, Tag
 from users.models import Follow, User
@@ -128,8 +137,8 @@ class RecipeViewSet(
     queryset = Recipe.objects.select_related("author").prefetch_related(
         "tags", "ingredients"
     )
-    filter_backends = (DjangoFilterBackend,)
-    filterset_classes = RecipeFilter, IngredientFilter
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = RecipeFilter
     permission_class = (AuthorOrStaffOrReadOnly,)
     add_serializer = ShortRecipeSerializer
     pagination_class = PageNumberPagination
@@ -204,7 +213,7 @@ class RecipeViewSet(
         filename = f"{user.username}_shopping_cart.txt"
         shopping_cart = create_shopping_cart(user)
         response = HttpResponse(
-            shopping_cart, content_type="text.txt; charset=utf-8"
+            shopping_cart, content_type="text/plain; charset=UTF-8"
         )
         response["Content-Disposition"] = f"attachment; filename={filename}"
         return response

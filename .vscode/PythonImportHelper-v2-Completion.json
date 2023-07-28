@@ -900,6 +900,14 @@
         "documentation": {}
     },
     {
+        "label": "AutocompleteFilter",
+        "importPath": "admin_auto_filters.filters",
+        "description": "admin_auto_filters.filters",
+        "isExtraImport": true,
+        "detail": "admin_auto_filters.filters",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -1397,7 +1405,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.admin",
         "description": "backend.foodgram.food.admin",
-        "peekOfCode": "class RecipeIngredientsAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели RecipeIngredient.\n    \"\"\"\n    list_display = (\"id\", \"recipe\", \"ingredient\", \"amount\")\n    list_filter = (\"id\", \"recipe\", \"ingredient\")\n    list_display_links = (\"id\", \"recipe\")\nclass AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"",
+        "peekOfCode": "class RecipeIngredientsAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели RecipeIngredient.\n    \"\"\"\n    list_display = (\"id\", \"recipe\", \"ingredient\", \"amount\")\n    list_display_links = (\"id\", \"recipe\")\n    search_fields = (\"recipe__name\", \"ingredient__name\")\nclass AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"",
         "detail": "backend.foodgram.food.admin",
         "documentation": {}
     },
@@ -1487,7 +1495,7 @@
         "kind": 6,
         "importPath": "backend.foodgram.food.filters",
         "description": "backend.foodgram.food.filters",
-        "peekOfCode": "class RecipeFilter(filters.FilterSet):\n    \"\"\"\n    Фильтры для сортировки результатов рецептов:\n    - по тегам\n    - по наличию в избранном\n    - по наличию в списке покупок.\n    \"\"\"\n    is_favorited = filters.BooleanFilter(\n        method=\"get_is_favorited\",\n    )",
+        "peekOfCode": "class RecipeFilter(filters.FilterSet):\n    \"\"\"\n    Фильтры для сортировки результатов рецептов:\n    - по тегам\n    - по наличию в избранном\n    - по наличию в списке покупок.\n    \"\"\"\n    author = filters.NumberFilter(field_name=\"author\", lookup_expr=\"exact\")\n    is_favorited = filters.BooleanFilter(\n        method=\"get_is_favorited\",",
         "detail": "backend.foodgram.food.filters",
         "documentation": {}
     },
@@ -1825,11 +1833,29 @@
         "documentation": {}
     },
     {
+        "label": "UserAutocompleteFilter",
+        "kind": 6,
+        "importPath": "backend.foodgram.users.admin",
+        "description": "backend.foodgram.users.admin",
+        "peekOfCode": "class UserAutocompleteFilter(AutocompleteFilter):\n    title = \"User\"\n    field_name = \"user\"\nclass AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"\n@admin.register(Follow)\nclass FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.",
+        "detail": "backend.foodgram.users.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorAutocompleteFilter",
+        "kind": 6,
+        "importPath": "backend.foodgram.users.admin",
+        "description": "backend.foodgram.users.admin",
+        "peekOfCode": "class AuthorAutocompleteFilter(AutocompleteFilter):\n    title = \"Author\"\n    field_name = \"author\"\n@admin.register(Follow)\nclass FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.\n    \"\"\"\n    list_display = (\"pk\", \"user\", \"author\")\n    list_filter = (",
+        "detail": "backend.foodgram.users.admin",
+        "documentation": {}
+    },
+    {
         "label": "FollowAdmin",
         "kind": 6,
         "importPath": "backend.foodgram.users.admin",
         "description": "backend.foodgram.users.admin",
-        "peekOfCode": "class FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.\n    \"\"\"\n    list_display = (\"pk\", \"user\", \"author\")\n    list_filter = (\"user\", \"author\")\n    search_fields = (\"author\",)\n    def get_queryset(self, request):\n        queryset = super().get_queryset(request)\n        return queryset.select_related(\"user\", \"author\")",
+        "peekOfCode": "class FollowAdmin(admin.ModelAdmin):\n    \"\"\"\n    Административный класс для модели Follow.\n    \"\"\"\n    list_display = (\"pk\", \"user\", \"author\")\n    list_filter = (\n        UserAutocompleteFilter,\n        AuthorAutocompleteFilter,\n    )\n    search_fields = (\"author__username\",)",
         "detail": "backend.foodgram.users.admin",
         "documentation": {}
     },

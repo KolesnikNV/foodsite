@@ -1,3 +1,5 @@
+from admin_auto_filters.filters import AutocompleteFilter
+
 from django.contrib import admin
 
 from .models import Follow, User
@@ -17,8 +19,17 @@ class UserAdmin(admin.ModelAdmin):
         "last_name",
         "role",
     )
-    list_filter = ("email", "username")
     search_fields = ("username",)
+
+
+class UserAutocompleteFilter(AutocompleteFilter):
+    title = "User"
+    field_name = "user"
+
+
+class AuthorAutocompleteFilter(AutocompleteFilter):
+    title = "Author"
+    field_name = "author"
 
 
 @admin.register(Follow)
@@ -28,8 +39,11 @@ class FollowAdmin(admin.ModelAdmin):
     """
 
     list_display = ("pk", "user", "author")
-    list_filter = ("user", "author")
-    search_fields = ("author",)
+    list_filter = (
+        UserAutocompleteFilter,
+        AuthorAutocompleteFilter,
+    )
+    search_fields = ("author__username",)
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
