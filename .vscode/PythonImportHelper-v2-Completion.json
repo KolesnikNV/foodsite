@@ -825,14 +825,6 @@
         "documentation": {}
     },
     {
-        "label": "IngredientFilter",
-        "importPath": "food.filters",
-        "description": "food.filters",
-        "isExtraImport": true,
-        "detail": "food.filters",
-        "documentation": {}
-    },
-    {
         "label": "RecipeFilter",
         "importPath": "food.filters",
         "description": "food.filters",
@@ -1479,15 +1471,6 @@
         "description": "backend.foodgram.food.custom_fields",
         "peekOfCode": "class Base64ImageField(serializers.Field):\n    \"\"\"\n    Преобразует base64-строку в файловый объект при десериализации.\n    Преобразует файловый объект в base64-строку при сериализации.\n    \"\"\"\n    def to_internal_value(self, data):\n        \"\"\"\n        Преобразует base64-строку в файловый объект.\n        \"\"\"\n        try:",
         "detail": "backend.foodgram.food.custom_fields",
-        "documentation": {}
-    },
-    {
-        "label": "IngredientFilter",
-        "kind": 6,
-        "importPath": "backend.foodgram.food.filters",
-        "description": "backend.foodgram.food.filters",
-        "peekOfCode": "class IngredientFilter(filters.FilterSet):\n    \"\"\"\n    Класс фильтров для модели Ingredient.\n    Поддерживает фильтрацию по названию (регистронезависимо).\n    \"\"\"\n    name = filters.CharFilter(\n        field_name=\"name\",\n        lookup_expr=\"istartswith\",\n    )\n    class Meta:",
-        "detail": "backend.foodgram.food.filters",
         "documentation": {}
     },
     {

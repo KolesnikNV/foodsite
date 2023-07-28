@@ -3,14 +3,8 @@ from admin_auto_filters.filters import AutocompleteFilter
 from django.contrib import admin
 from django.db.models import Count
 
-from .models import (
-    FavoriteRecipe,
-    Ingredient,
-    Recipe,
-    RecipeIngredient,
-    ShoppingCart,
-    Tag,
-)
+from .models import (FavoriteRecipe, Ingredient, Recipe, RecipeIngredient,
+                     ShoppingCart, Tag,)
 
 
 @admin.register(Tag)

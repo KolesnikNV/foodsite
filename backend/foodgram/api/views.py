@@ -33,7 +33,7 @@ from api.serializers import (
     SubscriptionSerializer,
     TagsSerializer,
 )
-from food.filters import IngredientFilter, RecipeFilter
+from food.filters import RecipeFilter
 from food.models import Ingredient, Recipe, ShoppingCart, Tag
 from users.models import Follow, User
 
