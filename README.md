@@ -1,12 +1,13 @@
+![Python](https://img.shields.io/badge/Python-blue)
+![Django](https://img.shields.io/badge/Django-green)
+![Django Rest Framework](https://img.shields.io/badge/Django%20Rest%20Framework-orange)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue)
+![Docker](https://img.shields.io/badge/Docker-blue)
+![Nginx](https://img.shields.io/badge/Nginx-green)
+![Djoser](https://img.shields.io/badge/Djoser-yellow)
+![Figma](https://img.shields.io/badge/Figma-informational)
+
 # FoodGram
-Логин: admin
-Пароль: admin
-Адрес: http://foodsite.dynnamn.ru/
-
-Пользователь:
-Логин: q@q.ru
-Пароль: Kjkszpj135
-
 **FoodGram** - это веб-приложение, предоставляющее возможность пользователям делиться своими любимыми рецептами, а также находить и сохранять интересные рецепты других пользователей. Приложение позволяет авторизованным пользователям создавать, редактировать и удалять свои рецепты, а также добавлять их в список избранного или список покупок. Кроме того, пользователи могут подписываться на авторов рецептов и фильтровать рецепты по тегам.
 
 # Сервисы и страницы проекта
